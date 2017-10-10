@@ -1,0 +1,24 @@
+@ var head={
+<title>系统菜单</title>
+@}; var ctrls= "ng-controller='AppMenuCtrls'" ; var body={
+<input type="hidden" ng-model="username" ng-init="username='${username}'">
+<div id="home_system_name">兰州市地震应急指挥技术系统</div>
+<div id="home_log_out" ng-click="homelogout()">
+	<img src="jfinal-easyui/../static/css/msg-style/img/loginOut.png" />
+	退出系统
+</div>
+<div id = "main"  ng-controller="AppMenuCtrls">
+    <div id="app_modules_id">
+        <div class="app_modules_class" ><img id="c11" name="on" ng-click="goresapp()" src="jfinal-easyui/../static/images/sysIcon/zyzh.png" style="width: 120px;height: 120px;display: block;"></div>
+        <div class="app_modules_class" ><img id="c21" name="on" ng-click="goomeapp()" src="jfinal-easyui/../static/images/sysIcon/dzqz.png" style="width: 120px;height: 120px;display: block;"></div>
+        <div class="app_modules_class" ><img id="c41" name="on" ng-click="goeulapp()" src="jfinal-easyui/../static/images/sysIcon/pgfx.png" style="width: 120px;height: 120px;display: block;"></div>
+        <div class="app_modules_class" ><img id="c31" name="on" ng-click="goeveapp()" src="jfinal-easyui/../static/images/sysIcon/zqsb.png" style="width: 120px;height: 120px;display: block;"></div>
+        <div class="app_modules_class" ><img id="c51" name="on" ng-click="goauxapp()" src="jfinal-easyui/../static/images/sysIcon/fzjc.png" style="width: 120px;height: 120px;display: block;"></div>
+        <div class="app_modules_class" ><img id="c61" name="on" ng-click="gosetapp()" src="jfinal-easyui/../static/images/sysIcon/ywgl.png" style="width: 120px;height: 120px;display: block;"></div>
+    </div>
+</div>
+<div id="app_scanning"></div>
+@};var js={
+<link rel="stylesheet" href="${CONTEXT_PATH}/static/css/appmenu.css">
+<script src="${CONTEXT_PATH}/static/app/ctrls/appmenu-ctrls.js" type="text/javascript"></script>
+@}; include("../layout/_layout.html",{head:head,body:body,js:js,ctrls:ctrls}){}

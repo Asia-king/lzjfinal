@@ -1,0 +1,439 @@
+*{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color:#4E5055;
+}
+/*系统图标以及名称*/
+#sys_name_icon_id{
+	position: absolute;
+	float: left; 
+	left: 0px; 
+	top: 0px;
+	height: 80px;
+	width: 100%;
+	/*background-color: rgb(0,130,172);*/
+	background-image: url(../../static/images/topBg.png);
+}
+	#btn_sysname{
+		left:10px;
+		top:10px;
+		/*font-family:"DFKai-SB";*/
+		font-family:"幼圆";
+		font-weight: bold;
+		font-size: 2.6em;
+		color: #FFFFFF;
+		line-height: 70px;
+	}
+	#sys_childname{
+		font-size:20px;
+		color:#FFFFFF;
+	}
+	/*系统图标*/
+	#btn_sysicon{
+		height: 60px;
+		width: 60px
+	}
+		/*系统设置的按钮，包括皮肤选择和注销按钮*/
+		#operationBtn{
+			position: absolute;
+			left: 0px; 
+			bottom: 0px;
+			height:20px
+		}
+			#operationBtn #btn_skin{
+				height: 100%;
+				line-height: 20px;
+				width: 100px;
+			}
+			#operationBtn #btn_logout{
+				height: 100%;
+				line-height: 20px;
+				width: 80px;
+			}
+			#operationBtn label{
+				/*color: #FFFFFF;*/
+				position: relative;
+				top: -5px;
+				margin-bottom: 0px;
+			}
+	#sys_modules_id{
+		position: absolute; 
+		right: 5px; 
+		bottom: 0px;
+		float: right;
+		height: 80px; 
+		/*background-color: #0081c2*/
+	}
+	/*存放头部各个子系统的模块div的布局*/		
+	#sys_modules_do_id{
+		position: relative;
+		margin:60px auto;
+		text-align:center;
+		float: inherit;
+		height:20px;
+		/*background-color: #0052A3*/
+		background-image: url(../../static/images/north-bottom-bg.png);
+	}
+
+		/*头部---子系统区域按钮的布局*/
+		.sys_module_parent{
+			/*width: 100px;*/
+			height: 30px;
+			float: left;
+			border: 1px solid #00438A;
+			border-radius: 5px;
+			box-shadow: 2px 2px 2px #00438A;
+			background-color: #0052A3;
+			color: #FFFFFF;
+			font-size: 16px;
+			position: relative;
+			top: 40px;
+			line-height: 30px;
+			margin-left: 10px;
+			cursor: pointer;
+			/*background-color: #42454A;*/
+		}
+			.sys_module_parent:hover{
+				background-color: #0099CC;
+			}
+
+		/*头部---子系统模块布局*/
+		.sys_module_child{
+			/*float: left;*/
+			/*float: inherit;*/
+			/*margin-left: 10px;*/
+			border: 1px solid #00438A;
+			border-radius: 5px;
+			background-color: #0052A3;
+			cursor: pointer;
+			margin-left: 10px;
+			color: #FFFFFF;
+			display: inline;
+		}
+			.sys_module_child:hover{
+				background-color: #0099CC;
+			}
+
+
+	#bodyContent{
+		width: 245px;
+		height: 100%;
+		float: left;
+		/*background-color: #000080;*/
+	}
+	
+	/*easyui-layout 中 west面板 panel-header的样式修改*/
+	.layout-panel-west .panel-header{
+		border: none;
+		/*border-bottom: 0.5px solid #F5F5F5;*/
+	}
+	
+	/*用户名以及当前时间的设置*/
+	#user_and_currTime{
+		float:left;
+		color: #FFFFFF;
+	}
+	
+	/*返回首页以及退出系统设置*/
+	#home_and_logOut{
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		color: #FFFFFF;
+	}
+		#home_and_logOut img{
+			margin-bottom: 3px;
+		}
+		#index_home,#index_log_out{
+			cursor: pointer;
+			color: #FFFFFF;
+			float: left;
+			border: 1px solid rgba(0,0,0,0);
+		}
+		#h_l_split{
+			color: #FFFFFF;
+			float: left;
+		}
+		#index_home:hover,
+		#index_log_out:hover{
+			border: 1px solid #FFFFFF;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+
+/*搜索框以及搜索按钮的页面布局*/
+#searchDiv{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 1255;
+	display: none;
+}
+	#searchDiv input{
+		width: 200px;
+		border: 1px solid #D7D7D7;
+		box-shadow: 2px 2px 2px #ABABAB;
+		background-color: #FFFFFF;
+	}
+	
+		#searchDiv input::-ms-clear { 
+			display: none; 
+		}
+
+		#searchDiv img{
+			position: absolute;
+			right: 1px;
+			cursor: pointer;
+			margin: 6px;
+		}
+
+/*图例的样式布局*/
+#legend{
+	width: 150px;
+	/*height: 200px;*/
+	display: none;
+	position: absolute;
+	left: 10px;
+	bottom: 0px;
+	text-align: center;
+	z-index: 1255;
+	background-color: #FFFFFF;
+	border: 1px solid #D7D7D7;
+	box-shadow: 2px 2px 2px #ABABAB;
+}
+	#legendTitle{
+		text-align: left;
+		margin-left: 10px;
+		/*height: 30px;
+		line-height: 30px;*/
+	}
+	.legendContent{
+		width: 120px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: left;
+	}
+		.legendContent span{
+			margin-left: 20px;
+		}
+		.legendContent img{
+			width: 25px;
+			height: 25px;
+		}
+
+/*装载折线图和柱状图容器的样式布局*/
+#chart{
+	/*width: 200px;*/
+	/*height: 200px;*/
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	z-index: 1255;
+}
+
+/*图片浏览*/
+#pictureBroses{
+	width:530px; 
+	height:320px;
+	z-index: 1250;
+	display: none;
+	position: absolute;
+	left: 25%;
+	top: 15%;
+	padding:5px;
+	background-color: #FFFFFF;
+	border: 1px solid #D7D7D7;
+	box-shadow: 3px 3px 3px #ABABAB;
+	background-color: #FFFFFF;
+}
+	
+	#myFocusClose{
+		position: absolute;
+		right: -1px;
+		top: 0px;
+		cursor: pointer;
+	}
+	
+	/*焦点图盒子的样式布局*/
+	#myFocus{
+		width:400px; 
+		height:300px;
+	}
+		
+/*音视频播放控件*/
+#videoControl{
+	z-index: 1250;
+	display: none;
+	position: absolute;
+	left: 25%;
+	top: 15%;
+	border: 1px solid #D7D7D7;
+	box-shadow: 3px 3px 3px #ABABAB;
+	background-color: #FFFFFF;
+	padding: 10px;
+}
+	#videoControl #myvideosClose{
+		position: absolute;
+		top: 0px;
+		right: -1px;
+		cursor: pointer;
+	}
+
+/*辅助决策中辅助功能的按钮布局*/
+#assistDecDiv{
+	position: absolute;
+	left: 30%;
+	top: 10px;
+	z-index: 1255;
+	display: none;
+}
+	.ad_button_class{
+		display: none;
+	}
+	#ad_button{
+		border: 1px solid #D7D7D7;
+		box-shadow: 2px 2px 2px #ABABAB;
+		background-color: #FFFFFF;
+		padding: 5px;
+	}
+		#ad_button button{
+			border: 1px solid #D7D7D7;
+			border-radius: 5px;
+			background-color: #F3F3F3;
+			font-size: 12px;
+			font-family: "微软雅黑";
+		}
+	#ad_content{
+		display: none;
+		background-color: white;
+		border: 1px solid #D7D7D7;
+		box-shadow: 2px 2px 2px #ABABAB;
+		padding: 10px;
+	}
+		#ad_content input{
+			margin:0 5px 0 0;
+		}
+		
+/*装载webOffice控件的容器的样式*/
+.webOffice_button{
+	border: 1px solid #D7D7D7;
+	border-radius: 5px;
+	background-color: #F3F3F3;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+	/*#webOffice_fullScreen{
+		position: absolute;
+		right: 10px;
+		top: 5px;
+	}
+	
+	#webOffice_saveAs{
+		position: absolute;
+		right: 80px;
+		top: 5px;
+	}*/
+
+/*辅助决策子系统中做缓冲区分析面板的样式布局*/
+#bufferAnalysis{
+	display: none;
+	z-index: 1250;
+	border: 1px solid #D7D7D7;
+	box-shadow: 3px 3px 3px #ABABAB;
+	background-color: #FFFFFF;
+	position: absolute;
+	left: 100px;
+	top: 70px;
+	padding: 5px;
+	height: 90px;
+}
+	#bufferAnalysis #ba_close{
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		cursor:pointer;
+	}
+	
+	#bufferAnalysis #ba_inputInfo{
+		padding: 10px;
+	}
+	#bufferAnalysis #ba_sureButton{
+		border: 1px solid #D7D7D7;
+		border-radius: 5px;
+		background-color: #F3F3F3;
+		font-size: 12px;
+		font-family: "微软雅黑";
+		position: absolute;
+		right: 10px;
+		bottom: 5px;
+	}
+	
+/*辅助决策子系统中受灾群众安置模块安置点分析功能的布局位置*/
+#people_place_analy{
+	position: absolute;
+	z-index: 1250;
+	left: 10px;
+	bottom: 10px;
+	border: 1px solid #D7D7D7;
+	box-shadow: 3px 3px 3px #ABABAB;
+	background-color: #FFFFFF;
+	height: 150px;
+	padding: 10px;
+	display: none;
+}
+	#ppa_title{
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		font-size: 14px;
+	}
+	#ppa_analy_obj{
+		padding: 10px;
+	}
+	
+/*辅助决策子系统中查看摄像头实时视频窗口的样式布局*/
+#look_at_camera{
+	width:550px; 
+	height:275px;
+	z-index: 1250;
+	display: none;
+	padding: 5px;
+	position: absolute;
+	left: 25%;
+	top: 15%;
+	border: 1px solid #D7D7D7;
+	box-shadow: 3px 3px 3px #ABABAB;
+	background-color: #FFFFFF;
+}
+	/*关闭按钮*/
+	#look_at_camera #lac_close{
+		position: absolute;
+		top: -1px;
+		right: 0px;
+		cursor: pointer;
+	}
+	/*播放视频区域*/
+	#look_at_camera #videoRegion{
+		float: left;
+	}
+	/*视频控制按钮区域*/
+	#look_at_camera #controlButton{
+		width: 59px;
+		height: 100%;
+		float: right;
+		border-left: 1px solid #D7D7D7;
+	}
+	#look_at_camera #controlButton button{
+		font-size: 12px;
+		height: 50px;
+		width: 50px;
+		margin: 35px 0 0 7px;
+		border: 1px solid #D7D7D7;
+		border-radius: 5px;
+		background-color: #F3F3F3;
+		box-shadow: 3px 3px 3px #ABABAB;
+	}
+	

@@ -1,0 +1,9 @@
+
+2015-09-12 09:55:55
+[WARN]-[Thread: qtp716157500-41]-[com.jfinal.core.ActionHandler.handle()]: 401 Unauthorized: /system/bug/add
+
+2015-09-12 10:48:27
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-09-12 10:48:27
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！

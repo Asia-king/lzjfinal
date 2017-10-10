@@ -1,0 +1,55 @@
+#themeMap{
+	/*width: 89%;*/
+	height: 98%;
+	margin: auto;
+	padding-top: 3%;
+	display: block;
+}
+	.tm_selectDiv{
+		width: 60px;
+		height: 60px;
+		/*line-height: 70px;*/
+		/*background-image: url(../../images/tm_noSelect.png);*/
+		/*background-size: 100% 100%;*/
+		float: left;
+		margin: 15px 0 0 15px;
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+		cursor: pointer;
+		
+		border: 2px solid rgb(162, 227, 187);
+		border-radius: 15px;
+		
+	}
+	
+	.tm_selectDivN{
+		background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	}
+	
+	.tm_selectDivY{
+		background-image: -ms-linear-gradient(top, rgb(59, 142, 222), rgb(0, 22, 137));
+		background-image: -webkit-linear-gradient(top, rgb(59, 142, 222), rgb(0, 22, 137));
+		background-image: -moz-linear-gradient(top, rgb(59, 142, 222), rgb(0, 22, 137));
+		background-image: -o-linear-gradient(top, rgb(59, 142, 222), rgb(0, 22, 137));
+		background-image: linear-gradient(top, rgb(59, 142, 222), rgb(0, 22, 137));
+		
+	}
+		.tm_selectDiv label{
+			font-size: 12px;
+			width: 50px;
+			margin-left: 5px;
+			color: #FFFFFF;
+		}
+		.tm_selectDiv #spanHalf{
+			margin-top: 10px;
+			color: #FFFFFF;
+		}
+		.tm_selectDiv #spanFull{
+			margin-top: 20px;
+			color: #FFFFFF;
+		}

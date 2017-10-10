@@ -1,0 +1,38 @@
+/*
+ * 物资运输模块样式设置
+ * */
+#transportGoods{
+	width: 89%;
+	height: 98%;
+	padding: 10px;
+	margin: auto;
+	display: none;
+}
+
+/*左侧面板面板上查询结果列表的样式*/
+.tg_result_listN{
+	padding-left: 5px;
+	border: none;
+	border-bottom: 0.5px solid #F5F5F5;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+
+.tg_result_listY{
+	padding-left: 5px;
+	text-align: center;
+	background-color: #00EE00;
+	border: 0.5px solid white;
+	border-radius: 10px;
+}
+
+	.tg_result_list:hover{
+		background-color: #00EE00;
+		border: 0.5px solid white;
+		border-radius: 10px;
+		cursor: pointer;
+	}
+	
+	.tg_result_list span{
+		color: #DA4F49;
+	}

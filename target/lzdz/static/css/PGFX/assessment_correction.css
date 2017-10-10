@@ -1,0 +1,40 @@
+/*评估修正模块样式布局*/
+#asseCorrection{
+	width: 89%;
+	height: 98%;
+	margin: auto;
+	display: none;
+}
+	#asse_c_content{
+		width: 200px;
+		height: 100%;
+	}
+
+#sec_earth_para_button{
+	margin-left: 80px;
+	font-size: 12px;
+	width: 60px;
+	cursor: pointer;
+	color:#FFFFFF;
+	background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+	border: none;
+}
+#sec_earth_map_button{
+	margin-left: 80px;
+	font-size: 12px;
+	width: 60px;
+	cursor: pointer;
+	color:#FFFFFF;
+	background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+	border: none;
+}

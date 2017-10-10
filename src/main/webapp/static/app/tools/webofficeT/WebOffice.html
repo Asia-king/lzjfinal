@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+<style type="text/css">
+<!--
+.topSide {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-top-color: #3366CC;
+	border-right-color: #3366CC;
+	border-bottom-color: #3366CC;
+	border-left-color: #3366CC;
+}
+.leftBorder {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-left-style: dashed;
+	border-left-color: #0066FF;
+}
+.downSide {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #0066FF;
+}
+.STYLE1 {color: #FF0000}
+-->
+</style>
+<!-- --------------------=== ����Weboffice��ʼ������ ===--------------------- -->
+<SCRIPT LANGUAGE=javascript FOR=WebOffice1 EVENT=NotifyCtrlReady>
+<!--
+ //WebOffice1_NotifyCtrlReady()			// ��װ����Weboffice(ִ��<object>...</object>)�ؼ���ִ�� "WebOffice1_NotifyCtrlReady"����
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE=javascript>
+<!--
+// ---------------------=== �ؼ���ʼ��WebOffice���� ===---------------------- //
+function WebOffice1_NotifyCtrlReady() {
+		document.all.WebOffice1.LoadOriginalFile("", "doc");
+}
+// ---------------------=== �½��ĵ� ===---------------------- //
+function newDoc() {
+		var doctype=document.all.doctype.value;
+		document.all.WebOffice1.LoadOriginalFile("", doctype);
+document.all.WebOffice1.LoadOriginalFile("http://192.168.1.26:8080/examples/3.xlsx", doctype);
+}
+// ---------------------=== ��ʾ��ӡ�Ի��� ===---------------------- //
+function showPrintDialog(){
+		document.all.WebOffice1.PrintDoc(1);
+}
+// ---------------------=== ֱ�Ӵ�ӡ ===---------------------- //
+function zhiPrint(){
+		document.all.WebOffice1.PrintDoc(0);
+}
+// ---------------------== �ر�ҳ��ʱ���ô˺���ر��ļ� ==---------------------- //
+function window_onunload() {
+	document.all.WebOffice1.Close();
+}
+ 
+// ---------------------------== ����ĵ����� ==---------------------------------- //
+function UnProtect() {
+	document.all.WebOffice1.ProtectDoc(0,1, document.all.docPwd.value);
+}
+
+// ---------------------------== �����ĵ����� ==---------------------------------- //
+function ProtectFull() {
+	document.all.WebOffice1.ProtectDoc(1,1, document.all.docPwd.value);
+}
+// ---------------------------== ��ֹ��ӡ ==---------------------------------- //
+function notPrint() {
+		document.all.WebOffice1.SetSecurity(0x01); 
+}
+// ---------------------------== �ָ������ӡ ==---------------------------------- //
+function okPrint() {
+		document.all.WebOffice1.SetSecurity(0x01 + 0x8000);
+
+}
+// ---------------------------== ��ֹ���� ==---------------------------------- //
+function notSave() {
+		document.all.WebOffice1.SetSecurity(0x02); 
+
+}
+// ---------------------------== �ָ����?�� ==---------------------------------- //
+function okSave() {
+		document.all.WebOffice1.SetSecurity(0x02 + 0x8000);
+
+}
+// ---------------------------== ��ֹ���� ==---------------------------------- //
+function notCopy() {
+		document.all.WebOffice1.SetSecurity(0x04); 
+}
+// ---------------------------== �ָ����?�� ==---------------------------------- //
+function okCopy() {
+		document.all.WebOffice1.SetSecurity(0x04 + 0x8000); 
+
+}
+// ---------------------------== ��ֹ�϶� ==---------------------------------- //
+function notDrag() {
+		document.all.WebOffice1.SetSecurity(0x08); 
+}
+// ---------------------------== �ָ��϶� ==---------------------------------- //
+function okDrag() {
+		document.all.WebOffice1.SetSecurity(0x08 + 0x8000); 
+
+}
+// -----------------------------== �޶��ĵ� ==------------------------------------ //
+function ProtectRevision() {
+	document.all.WebOffice1.SetTrackRevisions(1) 
+}
+
+// -----------------------------== �����޶� ==------------------------------------ //
+function UnShowRevisions() {
+	document.all.WebOffice1.ShowRevisions(0);
+}
+
+// --------------------------== ��ʾ��ǰ�޶� ==---------------------------------- //
+function ShowRevisions() {
+	document.all.WebOffice1.ShowRevisions(1);
+
+}
+
+// -------------------------== ���ܵ�ǰ�����޶� ==------------------------------- //
+function AcceptAllRevisions() {
+ 	document.all.WebOffice1.SetTrackRevisions(4);
+}
+
+// ---------------------------== ���õ�ǰ�����û� ==------------------------------- //
+function SetUserName() {
+	if(document.all.UserName.value ==""){
+		alert("�û����Ϊ��")
+		document.all.UserName.focus();
+		return false;
+	}
+ 	document.all.WebOffice1.SetCurrUserName(document.all.UserName.value);
+}
+// -------------------------=== ������ǩ ===------------------------------ //
+function addBookmark() {
+	document.all.WebOffice1.SetFieldValue("mark_1", "������Ϣ�������޹�˾", "::ADDMARK::");			
+}
+
+// -------------------------=== ������ǩ�׼Ӻ�ͷ ===------------------------------ //
+function addRedHead() {
+	document.all.WebOffice1.SetFieldValue("mark_1", "", "::ADDMARK::");			// �����ǩ
+	document.all.WebOffice1.SetFieldValue("mark_1", "E:\\tem1.doc", "::FILE::");
+}
+// -------------------------=== ������ǩ����ͼƬ ===------------------------------ //
+function addImage() {
+	document.all.WebOffice1.SetFieldValue("mark_1", "", "::ADDMARK::");			// �����ǩ
+	document.all.WebOffice1.SetFieldValue("mark_1", "c:\\image\\logo.gif", "::JPG::");
+}
+
+
+// -----------------------------== ������ҳ ==------------------------------------ //
+function return_onclick() {
+	document.all.WebOffice1.Close();
+	window.location.href  = "index.jsp"
+}
+// �򿪱����ļ�
+function docOpen() {
+	document.all.WebOffice1.LoadOriginalFile("open", "doc");
+}
+// -----------------------------== �����ĵ� ==------------------------------------ //
+function newSave() {
+	document.all.WebOffice1.Save();
+}
+// -----------------------------== ���Ϊ�ĵ� ==------------------------------------ //
+function SaveAsTo() {
+	document.all.WebOffice1.ShowDialog(84);
+}
+// -----------------------------== ���ز˵� ==------------------------------------ //
+function notMenu() {
+	document.all.WebOffice1.SetToolBarButton2("Menu Bar",1,8);
+}
+// -----------------------------== ��ʾ�˵� ==------------------------------------ //
+function okMenu() {
+	document.all.WebOffice1.SetToolBarButton2("Menu Bar",1,11);
+}
+// -----------------------------== ���س��ù����� ==------------------------------------ //
+function notOfter() {
+	document.all.WebOffice1.SetToolBarButton2("Standard",1,8);
+}
+// -----------------------------== ��ʾ���ù����� ==------------------------------------ //
+function okOfter() {
+	document.all.WebOffice1.SetToolBarButton2("Standard",1,11);
+}
+// -----------------------------== ���ظ�ʽ������ ==------------------------------------ //
+function notFormat() {
+	document.all.WebOffice1.SetToolBarButton2("Formatting",1,8);
+}
+// -----------------------------== ��ʾ��ʽ������ ==------------------------------------ //
+function okFormat() {
+	document.all.WebOffice1.SetToolBarButton2("Formatting",1,11);
+} 
+
+function ShowToolBar_onclick()
+{
+    //ͨ��Document->application->CommandBars ��ȡ���˵�����
+	var vObj = document.all.WebOffice1.GetDocumentObject().Application.CommandBars("����ӡ��");
+	vObj.Visible = !vObj.Visible
+}
+function AddSeal_onclick()
+{
+    //ͨ��Document->application->CommandBars ��ȡ���˵�����
+  var vObj = document.all.WebOffice1.GetDocumentObject().Application.CommandBars("����ӡ��");
+	if(vObj) vObj.Controls("����").Execute();
+}   
+//-->
+</SCRIPT>
+</head>
+
+<body>
+<table width="1123" border="0" cellpadding="0" cellspacing="0">
+  <!--DWLayoutTable-->
+
+  <tr>
+    <td height="15" colspan="4" valign="top" bgcolor="#e5ecf9" class="topSide"><b><strong> DES��ҳ����WORD����</strong></b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td width="20" height="21">&nbsp;</td>
+    <td width="44">&nbsp;</td>
+    <td width="85">&nbsp;</td>
+    <td width="972">&nbsp;</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td height="23" colspan="4" valign="top" class="downSide">
+	  <font size="-1" >&nbsp;&nbsp;&nbsp;�ļ���ʽ: </font> 
+      <!-- ---------------=== �ô��ļ���ʽ��value�������Զ��� ===------------------------- -->
+		<select name="doctype" size="1" id="doctype">
+          <option value="doc">Word</option>
+          <option value="xls">Excel</option>
+	  <option value="ppt">ppt</option>
+      </select>
+		<input name="CreateFile" type="button" id="CreateFile" value="�½��ĵ�" onclick="newDoc()">
+            <span class="STYLE1">|</span>
+      <input name="button" type="button" onclick="return docOpen()" value="�򿪱����ļ�" />
+    <span class="STYLE1">|  </span><font size="-1">��ӡ:</font>
+	<input name="CreateFile" type="button" id="showPrint" value="��ʾ�Ի���" onclick="showPrintDialog()">
+	<input name="CreateFile" type="button" id="zhiPrint" value="ֱ�Ӵ�ӡ" onclick="zhiPrint()">
+	<span class="STYLE1">| </span><font size="-1" >����:</font>
+	<input name="CreateFile2" type="button" id="CreateFile2" value="����" onclick="newSave()" />
+	<input name="CreateFile3" type="button" id="CreateFile3" value="���Ϊ" onclick="SaveAsTo()" />
+	<span class="STYLE1"> | </span>
+	<INPUT name="ShowToolBar" type=button id="ShowToolBar" onClick="return ShowToolBar_onclick()" value="ӡ�¹�����" >
+	<INPUT name="AddSeal" type=button id="AddSeal" onClick="return AddSeal_onclick()" value="����" >
+	<br /></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td height="63">&nbsp;</td>
+    <td colspan="2" align="center" valign="top" class="downSide">
+     <font size="-2" >�û���</font>
+	  <br />
+        <input name="UserName" type="text" value="Test" style="width:74px;" maxlength="10" />
+        <br />
+        <input name="button2" type="button" class="btn"  onclick="return SetUserName()" value="�����û�" />    </td>
+  <td colspan="2" rowspan="12" valign="top" class="leftBorder">
+      <!-- -----------------------------== װ��weboffice�ؼ� ==--------------------------------- -->
+					<script src="LoadWebOffice.js"></script>   
+    <!-- --------------------------------== ����װ�ؿؼ� ==----------------------------------- -->  </td>
+  </tr>
+  <tr>
+    <td height="69">&nbsp;</td>
+    <td colspan="2" align="center" valign="top" class="downSide">
+				<font size="-2">�������룺</font><br>
+              <input name="docPwd" type="text" value="Password" style="width:74px;" maxlength="10">
+              <br>
+              <input type="button" class="btn" value="�����ĵ�" onClick="return ProtectFull()">
+              <br />
+    <input name="button3" type="button" class="btn" onclick="return UnProtect()" value="���" /></td>
+  </tr>
+  <tr>
+    <td height="44">&nbsp;</td>
+    <td colspan="2" align="center" valign="top" class="downSide"><input type="button" class="btn" value="���ô�ӡ" onClick="return notPrint()">
+      <br />
+      <input name="button3" type="button" class="btn" onclick="return okPrint()" value="���ô�ӡ" /></td>
+  </tr>
+  <tr>
+    <td height="44">&nbsp;</td>
+    <td colspan="2" align="center" valign="top" class="downSide"><input name="button10" type="button" class="btn" onclick="return notSave()" value="��ֹ����" />
+      <br />
+      <input name="button32" type="button" class="btn" onclick="return okSave()" value="���?��" /></td>
+  </tr>
+  <tr>
+    <td height="44">&nbsp;</td>
+    <td colspan="2" align="center" valign="top" class="downSide"><input name="button11" type="button" class="btn" onclick="return notCopy()" value="��ֹ����" />
+      <br />
+      <input name="button33" type="button" class="btn" onclick="return okCopy()" value="���?��" /></td>
+  </tr>
+    <tr>
+    <td height="44">&nbsp;</td>
+    <td colspan="2" align="center" valign="top" class="downSide"><input name="but11" type="button" class="btn" onclick="return notDrag()" value="��ֹ�϶�" />
+      <br />
+      <input name="but33" type="button" class="btn" onclick="return okDrag()" value="�����϶�" /></td>
+  </tr>
+  <tr>
+    <td height="86">&nbsp;</td>
+    <td colspan="2" align="center" valign="top" class="downSide"><input name="button4"  type="button" class="btn" onclick="return ProtectRevision()" value="�޶��ĵ�" />
+      <br />
+      <input name="button5" type="button" class="btn" onclick="return ShowRevisions()" value="��ʾ�޶�" />
+      <br />
+      <input name="button6" type="button" class="btn" onclick="return UnShowRevisions()" value="�����޶�" />
+      <br />
+      <input name="button7" type="button" class="btn" onclick="return AcceptAllRevisions()" value="�����޶�" /></td>
+  </tr>
+  <tr>
+    <td height="23">&nbsp;</td>
+    <td colspan="2" align="center" valign="top" class="downSide"><input name="button8"  type="button" class="btn" onclick="return addBookmark()" value="������ǩ" /></td>
+  </tr>
+  <tr>
+    <td height="23">&nbsp;</td>
+    <td colspan="2" align="center" valign="top" class="downSide"><span class="downSide">
+      <input name="button9"  type="button" class="btn" onclick="return addRedHead()" value="�׼Ӻ�ͷ" />
+    </span></td>
+  </tr>
+  <tr>
+    <td height="23">&nbsp;</td>
+    <td colspan="2" align="center" valign="top" class="downSide"><span class="downSide">
+      <input name="button92"  type="button" class="btn" onclick="return addImage()" value="����ͼƬ" />
+    </span></td>
+  </tr>
+  <tr>
+    <td height="126">&nbsp;</td>
+    <td colspan="2" align="center" valign="top" class="downSide">
+      <input name="button12" type="button" class="btn" onclick="return notMenu()" value="���ز˵�" /><br />
+	   <input name="button12" type="button" class="btn" onclick="return okMenu()" value="��ʾ�˵�" /><br />
+	    <input name="button12" type="button" class="btn" onclick="return notOfter()" value="���س���" /><br />
+		 <input name="button12" type="button" class="btn" onclick="return okOfter()" value="��ʾ����" /><br />
+		  <input name="button12" type="button" class="btn" onclick="return notFormat()" value="���ظ�ʽ" /><br />
+		   <input name="button12" type="button" class="btn" onclick="return okFormat()" value="��ʾ��ʽ" /></td>
+  </tr>
+  <tr>
+    <td height="200">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td height="35">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td></td>
+  </tr>
+</table>
+</body>
+</html>

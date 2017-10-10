@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" >
+			function openLocalFile(){
+//				document.all.WebOffice1.LoadOriginalFile("open", "doc");
+				document.all.WebOffice1.LoadOriginalFile("C:/Users/wjj/Desktop/webofficeT/image/tmp1.doc", "doc");
+			}
+			
+			function saveFile(){
+				document.all.WebOffice1.Save();
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="openLocalFile()">open test</button>
+		<button onclick="saveFile()">save test</button>
+		<div id="openOffice" style="width: 1000px; height: 800px; border: 1px slid red;">
+			<script src="LoadWebOffice.js"></script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+/*历史地震模块页面布局*/
+#historiEarthquake{
+	/*width: 89%;*/
+	height: 98%;
+	margin: auto;
+	display: none;
+	overflow: auto;
+}
+	.he_labelDiv{
+		height: 30px;
+		line-height: 30px;
+		border-bottom: 0.5px solid #F1F1F1;
+		border-radius: 5px;
+		text-align: center;
+		cursor: pointer;
+	}
+		.he_labelDiv:hover{
+			background-color: #61C221;
+		}

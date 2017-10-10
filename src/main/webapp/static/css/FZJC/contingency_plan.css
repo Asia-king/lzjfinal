@@ -1,0 +1,47 @@
+/*
+ * 应急预案模块样式设置
+ * */
+#contingencyPlan{
+	width: 89%;
+	height: 98%;
+	padding: 10px;
+	margin: auto;
+	display: none;
+}
+
+	/* tree的样式 */
+	#con_plan_tree{
+		height:90%;
+		overflow: auto;
+	}
+
+	/*搜索框样式设置*/
+	#cp_searchDiv{
+		
+	}
+	
+	#cp_searchDiv input{
+		width: 180px;
+		border: 1px solid #D7D7D7;
+		box-shadow: 2px 2px 2px #ABABAB;
+		background-color: #FFFFFF;
+	}
+	
+		#cp_searchDiv input::-ms-clear { 
+			display: none; 
+		}
+
+		#cp_searchDiv #cp_search_button{
+			position: absolute;
+			right: 35px;
+			cursor: pointer;
+			margin: 6px;
+		}
+		
+		#cp_searchDiv #cp_return_button{
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			cursor: pointer;
+			margin-top: 3px;
+		}

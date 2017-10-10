@@ -1,0 +1,89 @@
+/*预评估模块的样式布局*/
+#preEvaluation{
+	width: 89%;
+	height: 98%;
+	margin: auto;
+	display: none;
+}
+	/*用户信息输入区域的 布局*/
+	#pre_e_fill_in{
+		height: 49%;
+		width: 100%;
+	}
+		/*该区域中input输入框的样式*/
+		#pre_e_earth_time,#pre_e_earth_level,#pre_e_earth_deepth{
+			width: 140px;
+			height: 18px;
+			margin-bottom: 8px;
+		}
+		#pre_pos_lat,#pre_pos_lon{
+			width: 178px;
+			height: 18px;
+			margin-bottom: 5px;
+		}
+		
+		#pre_e_earth_pos{
+			width: 100%;
+			margin-left: 15px;
+		}
+		
+		#pre_earth_get_pos{
+			font-size: 12px;
+			width: 40px;
+			float: right;
+			margin-top: 5px;
+			margin-right: 5px;
+			cursor: pointer;
+			color:#FFFFFF;
+			background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+			border: none;
+		}
+		#pre_pos_des{
+			width: 178px;
+			height: 30px;
+		}
+		/*分析按钮*/
+		#pre_earth_ana_button{
+			margin-left: 80px;
+			font-size: 12px;
+			width: 60px;
+			cursor: pointer;
+			color:#FFFFFF;
+			background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+			border: none;
+		}
+
+#pre_earth_reset_button{
+	margin-left: 80px;
+	font-size: 12px;
+	width: 60px;
+	cursor: pointer;
+	color:#FFFFFF;
+	background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+	border: none;
+}
+	#preEvaluation hr{
+		width: 100%;
+		margin: 0;
+		color:#FFFFFF;
+	}
+	/*产生评估结果过程的展示区域*/
+	#pre_ana_process{
+		height: 50px;
+		width: 100%;
+	}

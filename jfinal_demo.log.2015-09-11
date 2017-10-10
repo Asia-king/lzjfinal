@@ -1,0 +1,1638 @@
+
+2015-08-28 10:39:18
+[WARN]-[Thread: qtp716157500-28]-[com.jfinal.core.ActionHandler.handle()]: 401 Unauthorized: /system/role/grant
+
+2015-08-28 10:39:28
+[WARN]-[Thread: qtp716157500-35]-[com.jfinal.core.ActionHandler.handle()]: 401 Unauthorized: /system/role/grant
+
+2015-08-28 10:39:36
+[WARN]-[Thread: qtp716157500-36]-[com.jfinal.core.ActionHandler.handle()]: 401 Unauthorized: /system/role/grant
+
+2015-08-28 10:40:26
+[WARN]-[Thread: qtp716157500-28]-[com.jfinal.core.ActionHandler.handle()]: 401 Unauthorized: /system/role/grant
+
+2015-08-28 10:41:11
+[WARN]-[Thread: qtp716157500-36]-[com.jfinal.core.ActionHandler.handle()]: 401 Unauthorized: /system/log/delete
+
+2015-08-28 10:49:40
+[WARN]-[Thread: qtp716157500-32]-[com.jfinal.core.ActionHandler.handle()]: 401 Unauthorized: /system/log/delete
+
+2015-08-28 11:23:58
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-28 11:23:58
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-28 11:24:00
+[ERROR]-[Thread: main]-[com.alibaba.druid.pool.DruidDataSource.init()]: init datasource error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-28 11:24:00
+[ERROR]-[Thread: main]-[com.alibaba.druid.pool.DruidDataSource.init()]: dataSource init error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-28 11:24:00
+[ERROR]-[Thread: main]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-28 11:24:00
+[WARN]-[Thread: main]-[org.eclipse.jetty.util.component.AbstractLifeCycle.setFailed()]: FAILED jfinal: java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.core.Config.startPlugins(Config.java:95)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	... 18 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-28 11:24:00
+[WARN]-[Thread: main]-[org.eclipse.jetty.webapp.WebAppContext.doStart()]: Failed startup of context o.e.j.w.WebAppContext{/,file:/D:/git/JFinal_Authority/jfinal-authority/src/main/webapp/}
+java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.core.Config.startPlugins(Config.java:95)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	... 18 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-28 11:24:33
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-28 11:24:33
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-28 11:24:34
+[ERROR]-[Thread: JFinal-Scanner]-[com.alibaba.druid.pool.DruidDataSource.init()]: init datasource error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer$1.onChange(JettyServer.java:106)
+	at com.jfinal.server.Scanner.compare(Scanner.java:87)
+	at com.jfinal.server.Scanner.working(Scanner.java:56)
+	at com.jfinal.server.Scanner.access$000(Scanner.java:30)
+	at com.jfinal.server.Scanner$1.run(Scanner.java:93)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-28 11:24:34
+[ERROR]-[Thread: JFinal-Scanner]-[com.alibaba.druid.pool.DruidDataSource.init()]: dataSource init error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer$1.onChange(JettyServer.java:106)
+	at com.jfinal.server.Scanner.compare(Scanner.java:87)
+	at com.jfinal.server.Scanner.working(Scanner.java:56)
+	at com.jfinal.server.Scanner.access$000(Scanner.java:30)
+	at com.jfinal.server.Scanner$1.run(Scanner.java:93)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-28 11:24:34
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer$1.onChange(JettyServer.java:106)
+	at com.jfinal.server.Scanner.compare(Scanner.java:87)
+	at com.jfinal.server.Scanner.working(Scanner.java:56)
+	at com.jfinal.server.Scanner.access$000(Scanner.java:30)
+	at com.jfinal.server.Scanner$1.run(Scanner.java:93)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-28 11:24:34
+[WARN]-[Thread: JFinal-Scanner]-[org.eclipse.jetty.util.component.AbstractLifeCycle.setFailed()]: FAILED jfinal: java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.core.Config.startPlugins(Config.java:95)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer$1.onChange(JettyServer.java:106)
+	at com.jfinal.server.Scanner.compare(Scanner.java:87)
+	at com.jfinal.server.Scanner.working(Scanner.java:56)
+	at com.jfinal.server.Scanner.access$000(Scanner.java:30)
+	at com.jfinal.server.Scanner$1.run(Scanner.java:93)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	... 18 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-28 11:24:34
+[WARN]-[Thread: JFinal-Scanner]-[org.eclipse.jetty.webapp.WebAppContext.doStart()]: Failed startup of context o.e.j.w.WebAppContext{/,file:/D:/git/JFinal_Authority/jfinal-authority/src/main/webapp/}
+java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.core.Config.startPlugins(Config.java:95)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer$1.onChange(JettyServer.java:106)
+	at com.jfinal.server.Scanner.compare(Scanner.java:87)
+	at com.jfinal.server.Scanner.working(Scanner.java:56)
+	at com.jfinal.server.Scanner.access$000(Scanner.java:30)
+	at com.jfinal.server.Scanner$1.run(Scanner.java:93)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	... 18 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-28 11:34:36
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-28 11:34:36
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-28 11:36:30
+[WARN]-[Thread: qtp716157500-32]-[com.jfinal.core.ActionHandler.handle()]: 401 Unauthorized: /system/user/delete
+
+2015-08-28 12:04:09
+[WARN]-[Thread: qtp716157500-31]-[com.jfinal.core.ActionHandler.handle()]: 401 Unauthorized: /system/user/delete
+
+2015-08-28 13:42:31
+[WARN]-[Thread: qtp716157500-27]-[com.jfinal.core.ActionHandler.handle()]: 401 Unauthorized: /system/user/delete
+
+2015-08-31 11:28:51
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-31 11:28:52
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-31 11:28:53
+[ERROR]-[Thread: main]-[com.alibaba.druid.pool.DruidDataSource.init()]: init datasource error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-31 11:28:53
+[ERROR]-[Thread: main]-[com.alibaba.druid.pool.DruidDataSource.init()]: dataSource init error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-31 11:28:53
+[ERROR]-[Thread: main]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-31 11:28:53
+[WARN]-[Thread: main]-[org.eclipse.jetty.util.component.AbstractLifeCycle.setFailed()]: FAILED jfinal: java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.core.Config.startPlugins(Config.java:95)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	... 18 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-31 11:28:53
+[WARN]-[Thread: main]-[org.eclipse.jetty.webapp.WebAppContext.doStart()]: Failed startup of context o.e.j.w.WebAppContext{/,file:/D:/git/JFinal_Authority/jfinal-authority/src/main/webapp/}
+java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.core.Config.startPlugins(Config.java:95)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	... 18 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2015-08-31 11:30:12
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-31 11:30:12
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-31 12:02:59
+[WARN]-[Thread: qtp716157500-32]-[com.jfinal.core.ActionHandler.handle()]: 401 Unauthorized: /system/log/delete
+
+2015-08-31 13:59:12
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-31 13:59:13
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-31 14:47:36
+[WARN]-[Thread: qtp716157500-34]-[com.jfinal.core.ActionHandler.handle()]: 401 Unauthorized: /system/bug/delete
+
+2015-08-31 16:18:55
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-31 16:18:56
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-31 16:19:03
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-31 16:19:03
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-08-31 16:19:03
+[ERROR]-[Thread: JFinal-Scanner]-[com.alibaba.druid.pool.DruidDataSource.init()]: init datasource error
+java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1417)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer$1.onChange(JettyServer.java:106)
+	at com.jfinal.server.Scanner.compare(Scanner.java:87)
+	at com.jfinal.server.Scanner.working(Scanner.java:56)
+	at com.jfinal.server.Scanner.access$000(Scanner.java:30)
+	at com.jfinal.server.Scanner$1.run(Scanner.java:93)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2015-08-31 16:19:03
+[ERROR]-[Thread: JFinal-Scanner]-[com.alibaba.druid.pool.DruidDataSource.init()]: dataSource init error
+java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1417)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer$1.onChange(JettyServer.java:106)
+	at com.jfinal.server.Scanner.compare(Scanner.java:87)
+	at com.jfinal.server.Scanner.working(Scanner.java:56)
+	at com.jfinal.server.Scanner.access$000(Scanner.java:30)
+	at com.jfinal.server.Scanner$1.run(Scanner.java:93)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2015-08-31 16:19:03
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+com.jfinal.plugin.activerecord.ActiveRecordException: java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer$1.onChange(JettyServer.java:106)
+	at com.jfinal.server.Scanner.compare(Scanner.java:87)
+	at com.jfinal.server.Scanner.working(Scanner.java:56)
+	at com.jfinal.server.Scanner.access$000(Scanner.java:30)
+	at com.jfinal.server.Scanner$1.run(Scanner.java:93)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1417)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+
+2015-08-31 16:19:03
+[WARN]-[Thread: JFinal-Scanner]-[org.eclipse.jetty.util.component.AbstractLifeCycle.setFailed()]: FAILED jfinal: java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.jfinal.core.Config.startPlugins(Config.java:95)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer$1.onChange(JettyServer.java:106)
+	at com.jfinal.server.Scanner.compare(Scanner.java:87)
+	at com.jfinal.server.Scanner.working(Scanner.java:56)
+	at com.jfinal.server.Scanner.access$000(Scanner.java:30)
+	at com.jfinal.server.Scanner$1.run(Scanner.java:93)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.jfinal.plugin.activerecord.ActiveRecordException: java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	... 18 more
+Caused by: java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1417)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+
+2015-08-31 16:19:03
+[WARN]-[Thread: JFinal-Scanner]-[org.eclipse.jetty.webapp.WebAppContext.doStart()]: Failed startup of context o.e.j.w.WebAppContext{/,file:/D:/git/JFinal_Authority/jfinal-authority/src/main/webapp/}
+java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.jfinal.core.Config.startPlugins(Config.java:95)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer$1.onChange(JettyServer.java:106)
+	at com.jfinal.server.Scanner.compare(Scanner.java:87)
+	at com.jfinal.server.Scanner.working(Scanner.java:56)
+	at com.jfinal.server.Scanner.access$000(Scanner.java:30)
+	at com.jfinal.server.Scanner$1.run(Scanner.java:93)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.jfinal.plugin.activerecord.ActiveRecordException: java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	... 18 more
+Caused by: java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1417)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+
+2015-09-11 17:04:22
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-09-11 17:04:22
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-09-11 17:04:22
+[ERROR]-[Thread: main]-[com.alibaba.druid.pool.DruidDataSource.init()]: init datasource error
+java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1417)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+
+2015-09-11 17:04:22
+[ERROR]-[Thread: main]-[com.alibaba.druid.pool.DruidDataSource.init()]: dataSource init error
+java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1417)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+
+2015-09-11 17:04:22
+[ERROR]-[Thread: main]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+com.jfinal.plugin.activerecord.ActiveRecordException: java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1417)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+
+2015-09-11 17:04:22
+[WARN]-[Thread: main]-[org.eclipse.jetty.util.component.AbstractLifeCycle.setFailed()]: FAILED jfinal: java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.jfinal.core.Config.startPlugins(Config.java:95)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: com.jfinal.plugin.activerecord.ActiveRecordException: java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	... 18 more
+Caused by: java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1417)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+
+2015-09-11 17:04:22
+[WARN]-[Thread: main]-[org.eclipse.jetty.webapp.WebAppContext.doStart()]: Failed startup of context o.e.j.w.WebAppContext{/,file:/D:/git/JFinal_Authority/jfinal-authority/src/main/webapp/}
+java.lang.RuntimeException: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.jfinal.core.Config.startPlugins(Config.java:95)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jayqqaa12.MyConfig.main(MyConfig.java:166)
+Caused by: com.jfinal.plugin.activerecord.ActiveRecordException: java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:139)
+	at com.jfinal.core.Config.startPlugins(Config.java:85)
+	... 18 more
+Caused by: java.sql.SQLException: connect error, url , driverClass com.mysql.jdbc.Driver
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1417)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:602)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:876)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:872)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:97)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:36)
+	... 21 more
+
+2015-09-11 17:21:11
+[WARN]-[Thread: main]-[net.sf.ehcache.store.disk.DiskStorageFactory.<init>()]: The index for data file C:\Users\12\AppData\Local\Temp\shiro-ehcache\shiro-active%0053ession%0043ache.data is out of date, probably due to an unclean shutdown. Deleting index file C:\Users\12\AppData\Local\Temp\shiro-ehcache\shiro-active%0053ession%0043ache.index
+
+2015-09-11 17:21:11
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！
+
+2015-09-11 17:21:12
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：D:\git\JFinal_Authority\jfinal-authority\src\main\webapp\WEB-INF\lib is not a dir！

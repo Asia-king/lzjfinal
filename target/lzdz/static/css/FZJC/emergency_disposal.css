@@ -1,0 +1,35 @@
+/*
+ * 紧急处置模块样式设置
+ * */
+#emergencyDisposal{
+	width: 89%;
+	height: 98%;
+	padding: 10px;
+	margin: auto;
+	display: none;
+}
+
+/*左侧面板面板上查询结果列表的样式*/
+/*未被选中的样式*/
+.ed_result_listN{
+	padding-left: 5px;
+	border: none;
+	border-bottom: 0.5px solid #F5F5F5;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+/*被选中的样式*/
+.ed_result_listY{
+	padding-left: 5px;
+	text-align: center;
+	background-color: #00EE00;
+	border: 0.5px solid white;
+	border-radius: 10px;
+}
+.ed_result_list:hover{
+	background-color: #00EE00;
+	border: 0.5px solid white;
+	border-radius: 10px;
+	cursor: pointer;
+}

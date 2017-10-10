@@ -1,0 +1,48 @@
+/*灾情分布模块样式布局*/
+#disasterDistribute{
+	/*width: 89%;*/
+	height: 98%;
+	padding: 10px;
+	margin: auto;
+	display: none;
+}
+	#disasterDistribute .panel{
+		width: 220px;
+	}
+	/*.dd_itemDiv{
+		height: 25px;
+		line-height: 25px;
+		border: 2px solid rgb(157,195,230);
+		border-radius: 5px;
+		text-align: center;
+		cursor: pointer;
+		margin-top: 5px;
+	}
+	
+		.dd_itemDiv:hover{
+			background-color: rgb(146,208,80);
+			color: white;
+		}
+	
+	.dd_itemN{
+		background-color: rgb(229,243,255);
+		color: #343434;
+	}
+	.dd_itemY{
+		background-color: rgb(146,208,80);
+		color: white;
+	}*/
+	
+	/*面板上查询结果列表的样式*/
+	.dd_result_list{
+		padding-left: 5px;
+		border-bottom: 0.5px solid #F5F5F5;
+		text-align: center;
+	}
+	
+	.dd_result_list:hover{
+		background-color: #00EE00;
+		border: 0.5px solid white;
+		border-radius: 10px;
+		cursor: pointer;
+	}

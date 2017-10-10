@@ -1,0 +1,48 @@
+/*资源整合子系统中统计分析模块的页面布局*/
+#analysisStatic{
+	width: 89%;
+	height: 98%;
+	margin: auto;
+	display: none;
+}
+	/*单选按钮布局*/
+	#as_singleSelect{
+		margin-top: 20px;
+	}
+		#as_singleSelect input{
+			margin: auto 5px 0 20px;
+			cursor: pointer;
+		}
+		
+	/*统计分析对象选择区域布局*/
+	#as_analyObj{
+		position: relative;
+		top: 15px;
+	}
+		#as_OjbData{
+			width: 160px;
+		}
+	
+	/*区分线*/
+	#analysisStatic hr{
+		width: 100%;
+		margin-top: 25px;
+	}
+
+/*combobox下拉框边框样式*/	
+.combo-panel{
+	border: 1px solid #D7D7D7;
+}	
+
+	#as_objAnaCon{
+		padding-left: 20px;
+	}
+		#as_objAnaCon input{
+			margin: auto 5px;
+		}
+		
+.legendContent canvas{
+	width: 15px;
+	height: 15px;
+	margin-right: 15px;
+}

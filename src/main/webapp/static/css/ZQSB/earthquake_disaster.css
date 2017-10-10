@@ -1,0 +1,169 @@
+#earthquakeDisaster{
+	display: none;
+	height: 100%;
+	margin: auto;
+}
+	#ed_addEventDiv{
+		height: 100%;
+		display: none;
+	}
+	#ed_type{
+		/*height: 30%;*/
+		height: 29%;
+		overflow: auto;
+	}
+		.ed_selectDiv{
+			float: left;
+			width: 60px;
+			height: 60px;
+			/*background-image: url(../../images/tm_noSelect.png);
+			background-size: 100% 100%;*/
+			margin: 15px 0 0 15px;
+			text-align: center;
+			display: table-cell;
+			vertical-align: middle;
+			cursor: pointer;
+			box-shadow: 2px 2px 1px 1px RGB(217, 217, 218);
+			border-radius: 10px;
+		}
+		.ed_selectDivN{
+			background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		}
+		.ed_selectDivY{
+			background-image: -ms-linear-gradient(top, rgb(59, 142, 222), rgb(0, 22, 137));
+			background-image: -webkit-linear-gradient(top, rgb(59, 142, 222), rgb(0, 22, 137));
+			background-image: -moz-linear-gradient(top, rgb(59, 142, 222), rgb(0, 22, 137));
+			background-image: -o-linear-gradient(top, rgb(59, 142, 222), rgb(0, 22, 137));
+			background-image: linear-gradient(top, rgb(59, 142, 222), rgb(0, 22, 137));
+		}
+			.ed_selectDiv label{
+				font-size: 12px;
+				width: 50px;
+				margin-left: 5px;
+				color:#FFFFFF;
+			}
+		
+		.ed_selectDiv #ed_spanHalf{
+			margin-top: 10px;
+		}
+		.ed_selectDiv #ed_spanFull{
+			margin-top: 20px;
+		}
+	
+	#ed_fill_message{
+		padding-left: 5px;
+	}
+		#ed_eq_list{
+			width: 165px;
+			padding:4px,6px;
+		}
+	
+		#ed_fill_message span{
+			line-height: 15px;
+		}
+		
+		#ed_fill_message input{
+			width: 165px;
+			height: 15px;
+		}
+		
+		#ed_latLonMessage{
+			height: 70px;
+		}
+			#latLonMessageFill{
+				float: left;
+			}
+			
+			#ed_latLonGet{
+				float: right;
+				width: 47px;
+				font-size: 12px;
+				margin-top: 5px;
+				/*background-color: #F0F0EE;
+				border: 1px solid #E8E8E8;*/
+				cursor: pointer;
+				color:#FFFFFF;
+				background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+				background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+				background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+				background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+				background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+				box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+				border: none;
+				
+			}
+			
+		#ed_otherMessage textarea{
+			width: 165px;
+		}
+		
+	#ed_type_status{
+		overflow: auto;
+		height: 25%;
+		padding-left: 5px;
+	}
+		#ed_type_status input{
+			height: 15px;
+		}
+		
+	#ed_submit{
+		position: absolute;
+		bottom: 5px;
+		left: 80px;
+	}
+
+		#ed_submit_button,#ed_return{
+			color:#FFFFFF;
+			/*background-color: #F0F0EE;*/
+			/*border: 1px solid #E8E8E8;*/
+			cursor: pointer;
+			/*box-shadow: 2px 2px 2px #E8E8E8;*/
+			background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+			border: none;
+			
+			margin-right: 20px;
+		}
+	
+	#ed_event_list_div{
+		height: 100%;
+	}
+		
+		#ed_event_lists{
+			height: 95%;
+			margin-left: 5px;
+			/*overflow: auto;*/
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		#ed_event_list_div button{
+			font-size: 12px;
+			color:#FFFFFF;
+			cursor: pointer;
+			background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+			box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+			border: none;
+		}
+		
+		.ad_evnet_list button{
+			float: right;
+			margin-right: 5px;
+		}
+		.ad_evnet_list hr{
+			width: 100%;
+			top: 0px;
+			margin: 5px 0;
+			margin-top: 10px;
+		}

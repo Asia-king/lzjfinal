@@ -1,0 +1,61 @@
+/*
+ * 受灾群众安置模块样式设置
+ * */
+#peoplePlace{
+	width: 89%;
+	height: 98%;
+	padding: 10px;
+	margin: auto;
+	display: none;
+}
+/*查询结果总数的显示样式*/
+#pp_total_div{
+	text-align: right;
+}
+	#pp_total_info{
+		color: #E9322D;
+	}
+
+/*放置查询结果的div的样式*/
+#pp_result_div{
+	height: 95%;
+}
+
+/*左侧面板面板上查询结果列表的样式*/
+/*未被选中的样式*/
+.pp_result_listN{
+	padding-left: 5px;
+	border: none;
+	border-bottom: 0.5px solid #F5F5F5;
+	text-align: center;
+	background-color: #FFFFFF;
+	margin-left: 15px;
+}
+
+/*被选中的样式*/
+.pp_result_listY{
+	padding-left: 5px;
+	text-align: center;
+	background-color: #00EE00;
+	border: 0.5px solid white;
+	border-radius: 10px;
+	margin-left: 15px;
+}
+
+.pp_result_list:hover{
+	background-color: #00EE00;
+	border: 0.5px solid white;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+/*装载复选框的div的样式*/
+.pp_result_select{
+	float: left;
+}
+	/*复选框的样式*/
+	.pp_result_select input{
+		margin-top: 15px;
+		border: 1px solid #CCCCCC;
+		border-radius: 2px;
+	}

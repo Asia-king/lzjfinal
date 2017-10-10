@@ -1,0 +1,99 @@
+/*html,body{*/
+    /*background-color: rgb(21,161,212);*/
+    /*margin: auto 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background-image: url(./msg-style/img/loginBg.png) ;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-size:cover;*/
+/*}*/
+
+
+
+html,body{
+    text-align:center;
+    margin:0px auto;
+    /*margin:0;*/
+    /*padding:0;*/
+    width:100%;
+    height:100%;
+    background-color: rgb(21,161,212);
+    background-image: url(./msg-style/img/shouye.png) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+#home_system_name{
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 4em;
+	font-weight: bold;
+	color: #FFFFFF;
+	/*font-family:"DFKai-SB";*/
+	font-family: "幼圆";
+	/*font-family: "华文琥珀";*/
+	position: absolute;
+	top: 60px;
+	text-shadow: 2px 2px 1px #ECF3DC;
+}
+#app_modules_id{
+	position: relative;
+	margin:0px auto;
+	text-align:center;
+	float: inherit;
+	height: 120px;
+	width:900px;
+}
+.app_modules_class img{
+	position:relative;
+	float:left;
+	margin-right: 20px;
+	cursor: pointer;
+	border-width: 5px;
+	border-style: solid;
+	border-color: rgba(0, 0, 0, 0) ;
+}
+	.app_modules_class img:hover{
+		/*border: 3px solid #EEEEEE;*/
+		border-color: #EEEEEE;
+		border-radius: 10px;
+		/*#F9F9FF*/
+		/*background-color: #6699FF;*/
+	}
+/*退出按钮*/
+#home_log_out{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	/*border:1px solid #F9F9FF;
+	border-radius: 5px;*/
+	color: #FFFFFF;
+	line-height: 24px;
+	cursor: pointer;
+}
+	#home_log_out:hover{
+		border:1px solid #F9F9FF;
+		border-radius: 5px;
+	}
+
+#main {position: absolute;width:900px;height:120px;left:50%;top:55%;
+    margin-left:-400px;margin-top:-75px;border:0px solid #00F;}
+
+.button{width:148px;height:148px;line-height:18px;font-size:18px;
+    background:url(./msg-style/img/cream.png) no-repeat left top;color:#FFF;padding-bottom:4px
+}
+
+#app_scanning{
+	height: 150px;
+    width: 150px;
+    position:absolute;
+    right:5px;
+    bottom:5px;
+    background-image: url(./msg-style/img/app_scanning.png) ;
+}

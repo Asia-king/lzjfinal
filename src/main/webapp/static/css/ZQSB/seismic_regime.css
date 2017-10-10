@@ -1,0 +1,129 @@
+/*
+ * 震情管理模块页面布局
+ */
+#seismicRegime{
+	display: none;
+	height: 98%;
+	margin: auto;
+}
+	/*震情信息分类汇总*/
+	#sr_eventReport{
+		height: 29%;
+		padding: 5%;
+	}
+		/*震情信息分类汇总div中单选按钮的样式*/
+		#sr_eventReport input{
+			margin: 0 0 0 15px;
+		}
+	
+	/*震情信息分类汇总与灾情文档之间的分割线*/
+	#seismicRegime hr{
+		border: 0.5px solid #E1E1E8;
+	}
+	
+	/*灾情文档*/
+	#sr_disasterDocument{
+		height: 70%;
+		padding: 5%;
+	}
+
+/*转载搜索框、删除按钮、导出按钮的div的布局*/
+#srOperatDiv{
+	width: 100%;
+}
+	
+	/*搜索窗口*/
+	#sr_searchDiv{
+		position: absolute;
+		left: 10px;
+		top: 10px;
+	}
+		#sr_searchDiv input{
+			width: 200px;
+			border: 1px solid #D7D7D7;
+			box-shadow: 2px 2px 2px #ABABAB;
+			background-color: #FFFFFF;
+		}
+		
+			#sr_searchDiv input::-ms-clear { 
+				display: none; 
+			}
+	
+			#sr_searchDiv img{
+				position: absolute;
+				right: 1px;
+				cursor: pointer;
+				margin: 6px;
+			}
+
+	/*导出按钮*/
+	#sr_export{
+		position: absolute;
+		right: 10px;
+		top: 20px;
+		width: 50px;
+		background-color: #F0F0EE;
+		border: 1px solid #E8E8E8;
+		cursor: pointer;
+		box-shadow: 2px 2px 2px #E8E8E8;
+	}
+	
+	/*删除按钮*/
+	#sr_delete{
+		position: absolute;
+		right: 70px;
+		top: 20px;
+		background-color: #F0F0EE;
+		border: 1px solid #E8E8E8;
+		cursor: pointer;
+		box-shadow: 2px 2px 2px #E8E8E8;
+	}
+	
+/*装载查询结果展示的div的样式布局*/
+#srQResult{
+	width: 100%;
+	/*border: 1px solid #D7D7D7;*/
+	background-color: #FFFFFF;
+}
+
+/*上报事件信息审核面板样式*/
+#srDataCheckDiv{
+	z-index: 1250;
+	border: 1px solid #D7D7D7;
+	box-shadow: 2px 2px 2px #ABABAB;
+	background-color: #FFFFFF;
+	position: absolute;
+	left: 40%;
+	top: 30%;
+}
+	#srDataCheckDiv img{
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		cursor: pointer;
+	}
+	
+	/*审核面板名称*/
+	#srCheckTitle{
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		font-size: 14px;
+	}
+	/*审核面板内容*/
+	#srCheckCon{
+		padding: 20px;
+	}
+	/*审核面板按钮*/
+	#srCheckButt{
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+	}
+		#srCheckButt button{
+			cursor: pointer;
+			background-color: #F0F0EE;
+			border: 1px solid #E8E8E8;
+			cursor: pointer;
+			box-shadow: 2px 2px 2px #E8E8E8;
+		}

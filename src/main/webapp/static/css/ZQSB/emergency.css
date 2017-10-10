@@ -1,0 +1,116 @@
+/*
+ * 紧急事件信息上报
+ * */
+#emergency{
+	display: none;
+	height: 98%;
+	margin: auto;
+	padding: 20px 0 0 5px;
+}
+	#eme_addEventDiv{
+		height: 100%;
+		display: none;
+	}
+	/*设置input输入框的样式*/
+	.emer_latlonInput{
+		height: 15px;
+		width: 110px;
+	}
+	
+	.emer_input{
+		height: 15px;
+		width: 165px;
+	}
+	
+	#emer_eq_list{
+		width: 165px;
+		padding:4px,6px;
+	}
+	
+	#emergency textarea{
+		width: 165px;
+	}
+	
+	/*获取坐标的按钮的样式*/
+	#emer_latLonGet{
+		float: right;
+		width: 47px;
+		font-size: 12px;
+		margin-top: 5px;
+		
+		background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+		border: none;
+		
+		color: #FFFFFF;
+	}
+	
+	#emer_latLonMessage{
+		height: 80px;
+	}
+		#emer_latLonMessageFill{
+			float: left;
+		}
+	
+	#emer_s_r_bu{
+		position: absolute;
+		bottom: 5px;
+		left: 80px;
+	}
+	
+	/*提交按钮的样式*/
+	#emer_submit,#emer_return{
+		margin-right: 20px;
+		/*background-color: #F0F0EE;*/
+		/*border: 1px solid #E8E8E8;*/
+		cursor: pointer;
+		/*box-shadow: 2px 2px 2px #E8E8E8;*/
+		background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+		border: none;
+		
+		color: #FFFFFF;
+	}
+	
+	#eme_event_list_div{
+		height: 100%;
+	}
+	
+	#eme_event_lists{
+		height: 95%;
+		margin-left: 5px;
+		/*overflow: auto;*/
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	#eme_event_list_div button{
+		font-size: 12px;
+		color:#FFFFFF;
+		cursor: pointer;
+		background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+		border: none;
+	}
+	
+	.eme_evnet_list button{
+		float: right;
+		margin-right: 5px;
+	}
+	.eme_evnet_list hr{
+		width: 100%;
+		top: 0px;
+		margin: 5px 0;
+		margin-top: 10px;
+	}

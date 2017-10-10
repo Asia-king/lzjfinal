@@ -1,0 +1,658 @@
+@ var head={
+<title>地震应急指挥技术系统</title>
+<!--播放摄像头实时视频功能加载ocx控件-->
+<!--<div ng-include="'${CONTEXT_PATH}/layout/rh?to=ocx'" ></div>-->
+<div style="height: 0px;">
+	<object id="VissCtrlImpl"
+			classid="CLSID:3C1AAF0C-BE65-443b-A859-B826F400F3EA"
+			CODEBASE="http://10.246.0.24:8199/viss/VissOCX_3.3.0.35.exe"
+			width="0"
+			height="0" style="margin-left:0px;margin-top: 0px;">
+	</object>
+</div>
+@}; var body={
+<div id="index_layout" ng-controller="IndexCtrls">
+	<input type="hidden" ng-model="appname" ng-init="appname='${appname}'">
+	<input type="hidden" ng-model="childapp" ng-init="childapp='${childapp}'">
+	<input type="hidden" ng-model="sys_username" ng-init="sys_username='${sys_username}'">
+	<input type="hidden" ng-model="sys_userid" ng-init="sys_userid='${sys_userid}'">
+	<!--头部布局-->
+	<div data-options="region:'north' " style="height: 80px; overflow: hidden;" class="logo">
+		<div ng-include="'${CONTEXT_PATH}/layout/rh?to=north'" ></div>
+	</div>
+	<!--左侧面板布局-->
+	<div  data-options="region:'west',split:true" title="  " style="width: 250px; overflow: hidden;">
+		<!--左侧面板运维布局-->
+		<div id="p_tab" title="功能菜单" style="padding: 5px;display: none;">
+			<div class="well well-small">
+				<ul id="layout_west_tree"  ng-init="init_west()"></ul>
+			</div>
+		</div>
+		<!-- 左侧面板应用子系统布局 -->
+		<div id="bodyContent">
+			<!--系统中各个模块的左侧面板布局，控制div的显示和隐藏来标识某一个模块-->
+			<!----------------------- 资源整合：数据仓库--------------------->
+			<div id="dataWareHouse"  ng-controller="dataWareHouseCtrls"  ng-init="dataWareHouseInit()" class="easyui-accordion"></div>
+			<!----------------------- 资源整合：书签 ----------------------->
+			<div id="bookMarkDiv" ng-controller="bookMarkCtrls" style="display: none;" ng-init="bookMarkInit()"></div>
+			<!----------------------- 资源整合：统计分析 --------------------->
+			<div id="analysisStatic" style="display: none;" ng-controller="analyStaCtrls" ng-init="analyStaModuleInit()">
+				<!--单选按钮，行政区or网格-->
+				<div id="as_singleSelect">
+					<input type="radio" name="as_radio" value="0" checked="checked" ng-click="showAreaAnaSta()"/>行政区
+					<input type="radio" name="as_radio" value="1" ng-click="showAnaSta()"/>网格
+				</div>
+				<!--统计分析对象-->
+				<div id="as_analyObj">
+					<span>请选择：</span>
+					<input id="as_OjbData" class="easyui-combobox" />
+				</div>
+				<hr id="as_hr" />
+				<!--统计对象的统计条件-->
+				<div id="as_objAnaCon"></div>
+			</div>
+			<!----------------------- 资源整合：专题图 ---------------------->
+			<div id="themeMap" ng-controller="themeMapCtrls" style="display: none;" ng-init="themeMapModuleInit()"></div>
+			<!----------------------- 资源整合：历史地震 --------------------->
+			<div id="historiEarthquake" style="display: none;" ng-controller="historiEarthquakeCtrls" ng-init="historiEarthModuleInit()"></div>
+			<!----------------------- 地震前兆 --------------------------->
+			<div id="earthquakePrecursor" style="display: none;" ng-controller="precursorCtrls" ng-init="precursorInit()">
+				<div class="overflowId">
+					<!--默认选中第一个-->
+					<div>
+						<div id="{{pre_fist.code}}" name="{{pre_fist.name}}" class='pre_option pre_optionN' ng-click="statusFunc(pre_fist.code,pre_fist.status)">
+							<div>
+								<p ng-bind='pre_fist.name'></p>
+							</div>
+						</div>
+					</div>
+					<!--从第二个数据开始布局-->
+					<div ng-repeat="pd in pre_data">
+						<div id="{{pd.code}}" name="{{pd.name}}" class='pre_option pre_optionY' ng-click="statusFunc(pd.code,pd.status)">
+							<div>
+								<p ng-bind='pd.name'></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--<hr>-->
+				<div class="pre_mid">
+					<div id="pre_search" class="search">
+						<p>图上选择</p>
+					</div>
+					<p>&nbsp;经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度:
+						<input type='text' id="x" class="pre_input" />
+					</p>
+					<p>&nbsp;纬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度:
+						<input type='text' id="y" class="pre_input" /> </p>
+					<p>&nbsp;发生时间:
+						<input type='text' id="happenTime" class="Wdate pre_inpu_text" /> </p>
+					<p>&nbsp;详细地址:
+						<input type='text' id="detailedAddress" class="pre_inpu_text" /> </p>
+					<p>&nbsp;描述信息:
+						<textarea id="describe" class="pre_textarea"></textarea>
+					</p>
+				</div>
+				<div>
+					<p id="pre_statu_mess">&nbsp;状态选择:</p>
+					<div class="overflowStatus">
+						<div ng-repeat="s in pre_status" class="pre_status">
+							<span>&nbsp;<input type="checkbox" value="{{s.name}}"/>&nbsp;&nbsp;{{s.name}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="pre_sub" ng-click="report()">
+					<p>上报</p>
+				</div>
+			</div>
+			<!----------------------- 震情速报：震后灾情 --------------------->
+			<div id="earthquakeDisaster" style="display: none;" ng-controller="earthquakeDisasterCtrls" ng-init="eqDisModuleInit()">
+				<!--新增事件的面板布局-->
+				<div id="ed_addEventDiv">
+					<div id="ed_type"></div>
+					<div id="ed_fill_message">
+						<span>地震目录：</span><input id="ed_eq_list">
+						<!--事件发生地点的经纬度-->
+						<div id="ed_latLonMessage">
+							<!--填写经纬度-->
+							<div id="latLonMessageFill">
+								<span>经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span><input id="ed_lat" type="text" style="width: 110px;" /><br />
+								<span>纬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span><input id="ed_lon" type="text" style="width: 110px;" />
+							</div>
+							<!--获取经纬度的按钮-->
+							<button id="ed_latLonGet">图上选择</button>
+						</div>
+						<div id="ed_otherMessage">
+							<span>发生时间：</span><input id="ed_eventTime" class="Wdate" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" /><br />
+							<span>详细地址：</span><input id="ed_eventAddress" type="text" /><br />
+							<span>描述信息：</span><textarea id="ed_eventDesc"></textarea>
+						</div>
+					</div>
+					<div id="ed_type_status"></div>
+					<div id="ed_submit">
+						<button id="ed_submit_button">提交</button>
+						<button id="ed_return" ng-click="edAddEvReturn()">返回</button>
+					</div>
+				</div>
+				<!--当前用户上报事件的事件列表-->
+				<div id="ed_event_list_div">
+					<button id="ed_addEventButt" ng-click="edEventAdd()">新增</button>
+					<div id="ed_event_lists"></div>
+				</div>
+			</div>
+			<!----------------------- 震情速报：紧急事件 ---------------------->
+			<div id="emergency" style="display: none;" ng-controller="emergencyCtrls" ng-init="emergencyModuleInit()">
+				<!--新增紧急事件面板-->
+				<div id="eme_addEventDiv">
+					<span>地震目录：</span><input id="emer_eq_list">
+					<span>事件名称：</span><input id="emer_eName" type="text" style="width:165px;" /><br />
+					<!--事件发生地点的经纬度-->
+					<div id="emer_latLonMessage">
+						<!--填写经纬度-->
+						<div id="emer_latLonMessageFill">
+							<span>经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span><input id="emer_lat" class="emer_latlonInput" type="text" /><br />
+							<span>纬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span><input id="emer_lon" class="emer_latlonInput" type="text" />
+						</div>
+						<!--获取经纬度的按钮-->
+						<button id="emer_latLonGet">图上选择</button>
+					</div>
+					<span>发生时间：</span><input id="emer_eTime" class="emer_input" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" /><br />
+					<span>详细地址：</span><input id="emer_eAddress" class="emer_input" type="text" /><br />
+					<span>描述信息：</span><textarea id="emer_describe"></textarea>
+					<div id="emer_s_r_bu">
+						<button id="emer_submit">提交</button>
+						<button id="emer_return" ng-click="emerListReturn()">返回</button>
+					</div>
+				</div>
+				<!--展示上报事件列表的面板-->
+				<div id="eme_event_list_div">
+					<button id="eme_addEventButt" ng-click="eme_addEventButt()">新增</button>
+					<div id="eme_event_lists"></div>
+				</div>
+			</div>
+			<!----------------------- 震情速报：安置点信息 --------------------->
+			<div id="placeInformation" style="display: none;" ng-controller="placeInfoCtrls" ng-init="placeInfoModuleInit()">
+				<!--安置点事件上报面板-->
+				<div id="pi_addEventDiv">
+					<span>地震目录：</span><input id="pinfo_eq_list">
+					<span>安置点名称：</span><input id="pinfo_name" style="width: 150px;" type="text" /><br />
+					<!--事件发生地点的经纬度-->
+					<div id="pinfo_latLonMessage">
+						<!--填写经纬度-->
+						<div id="pinfo_latLonMessageFill">
+							<span>经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span><input id="pinfo_lat" class="pinfo_latlonInput" type="text" /><br />
+							<span>纬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span><input id="pinfo_lon" class="pinfo_latlonInput" type="text" />
+						</div>
+						<!--获取经纬度的按钮-->
+						<button id="pinfo_latLonGet">图上选择</button>
+					</div>
+					<span>上&nbsp;&nbsp;报&nbsp;&nbsp;时&nbsp;&nbsp;间&nbsp;：</span><input id="pinfo_time" class="pinfo_input" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" /><br />
+					<span>详&nbsp;&nbsp;细&nbsp;&nbsp;地&nbsp;&nbsp;址&nbsp;：</span><input id="pinfo_address" class="pinfo_input" type="text" /><br />
+					<span>可&nbsp;容&nbsp;纳&nbsp;人数：</span><input id="pinfo_accommodate" class="pinfo_input" type="text" /><br />
+					<span>实际容纳人数：</span><input id="pinfo_realAcco" class="pinfo_input" type="text" /><br />
+					<span>受&nbsp;&nbsp;伤&nbsp;&nbsp;人&nbsp;&nbsp;数&nbsp;：</span><input id="pinfo_dams" class="pinfo_input" type="text" /><br />
+					<span>物资配备情况：</span><textarea id="pinfo_materialEqu"></textarea><br />
+					<span>医疗配备情况：</span><textarea id="pinfo_medicalEqu"></textarea><br />
+					<span>描&nbsp;&nbsp;述&nbsp;&nbsp;信&nbsp;&nbsp;息&nbsp;：</span><textarea id="pinfo_describe"></textarea>
+					<div id="pinf_s_r_bu">
+						<button id="pinfo_submit">提交</button>
+						<button id="pinfo_return" ng-click="placeInfoReturn()">返回</button>
+					</div>
+				</div>
+				<!--安置点上报事件列表展示面板-->
+				<div id="pi_list_div">
+					<button id="pi_addEventButt" ng-click="pi_addEventButt()">新增</button>
+					<div id="pi_lists"></div>
+				</div>
+			</div>
+			<!----------------------- 震情速报：震情管理 ---------------------->
+			<div id="seismicRegime" style="display: none;" ng-controller="seisRegCtrls" ng-init="seisRegModuleInit()">
+				<!--上报信息分类汇总-->
+				<div id="sr_eventReport">
+					震情信息分类汇总：<br />
+					<input id="seism_radio" type="radio" name="srerRadio" checked="checked" ng-click = "srDisasterEvent()" />&nbsp;&nbsp;震后灾情<br />
+					<input type="radio" name="srerRadio" ng-click = "srEmergEvent()" />&nbsp;&nbsp;紧急事件<br />
+					<input type="radio" name="srerRadio" ng-click = "srPlaceEvent()" />&nbsp;&nbsp;安置地点<br />
+					<input type="radio" name="srerRadio" ng-click = "srRescueState()" />&nbsp;&nbsp;救援队伍与物资运输<br />
+				</div>
+				<!--<hr />-->
+				<!--灾情文档-->
+				<!--<div id="sr_disasterDocument">
+					灾情文档：<br />
+				</div>-->
+			</div>
+			<!-----------------------评估分析：预评估---------------------------------->
+			<div id="preEvaluation" style="display: none;" ng-controller="preEvalCtrls" ng-init="preEvalModuleInit()">
+				<!--用户填写地震三要素的区域-->
+				<div id="pre_e_fill_in">
+					<input id="MNEvent" name="eventClass" type="radio" checked="checked" onclick="">模拟地震 <input id="ZSEvent" name="eventClass" type="radio" onclick="">真实地震<br /><br />
+					<span>发生时间：</span><input id="pre_e_earth_time" class="Wdate" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"/><br />
+					<span>地震级别：</span><input id="pre_e_earth_level" type="text" /><br />
+					<span>震源深度：</span><input id="pre_e_earth_deepth" type="text" /><br />
+					<span>震源位置：</span>
+					<div id="pre_e_earth_pos">
+						<span>经度</span><input id="pre_pos_lon" type="text" /><br />
+						<span>纬度</span><input id="pre_pos_lat" type="text" /><br />
+						<div id="pre_lonlat">
+						</div>
+						<span>描述</span><textarea id="pre_pos_des"></textarea>
+					</div>
+
+					<button id="pre_earth_ana_button">分析</button>
+					<button id="pre_earth_reset_button">重置</button>
+				</div>
+				<hr />
+				<!--产生评估结果的过程展示区域-->
+				<div id="pre_ana_process"></div>
+			</div>
+			<!-----------------------评估分析：评估修正---------------------------------->
+			<div id="asseCorrection" style="display: none;" ng-controller="asseCorreCtrls" ng-init="asseCorreModuleInit()">
+				<div id="asse_c_content" class="easyui-accordion">
+					<div title="综合修正" class="asse_con_div">
+						<span>房屋倒损率(%)：</span><br /><input id="sec_house_area" type="text" style="width: 178px" /><br />
+						<span>生命线损毁率(%)：</span><br /><input id="sec_lifeline_num" type="text" style="width: 178px"/><br />
+						<span>受灾人口比(%)：</span><br /><input id="sec_people_ratio" type="text" style="width: 178px"/><br />
+					</div>
+					<div title="房屋修正" class="asse_con_div">
+						<span>房屋结构</span><input id="fix_house_jiegou" type="text" style="width: 178px"/><br />
+						<span>烈度值(X-IV)</span><input id="fix_houseld" type="text" style="width: 178px"/><br />
+						<div id="fix_liedu">
+							<span>完好(%)</span><input id="fix_housewh" type="text" style="width: 178px"/><br />
+							<span>轻微破坏(%)</span><input id="fix_houseqw" type="text" style="width: 178px"/><br />
+							<span>中等破坏(%)</span><<input id="fix_housezd" type="text" style="width: 178px"/><br />
+							<span>严重破坏(%)</span><<input id="fix_houseyz" type="text" style="width: 178px"/><br />
+							<span>毁坏(%)</span><<input id="fix_househh" type="text" style="width: 178px"/><br />
+						</div>
+					</div>
+					<div title="人口修正" class="asse_con_div">
+						<span>烈度权值：</span><br /><input id="sec_weight_liedu" type="text" style="width: 178px"/><br />
+						<span>房屋倒损率(%)：</span><br /><input id="sec_housebad_ratio" type="text" style="width: 178px"/><br /><input id="sec_housebad_ratio2" type="text" style="width: 178px"/><br />
+					</div>
+					<div title="生命线修正" class="asse_con_div">
+						<span>烈度值(X-IV)</span><input id="fix_lifelineld" type="text" style="width: 178px"/><br />
+						<div id="fix_lifelineliedu">
+							<span>完好(%)</span><input id="fix_lifelinewh" type="text" style="width: 178px"/><br />
+							<span>轻微破坏(%)</span><input id="fix_lifelineqw" type="text" style="width: 178px"/><br />
+							<span>中等破坏(%)</span><<input id="fix_lifelinezd" type="text" style="width: 178px"/><br />
+							<span>严重破坏(%)</span><<input id="fix_lifelineyz" type="text" style="width: 178px"/><br />
+							<span>毁坏(%)</span><<input id="fix_lifelinehh" type="text" style="width: 178px"/><br />
+						</div>
+					</div>
+					<select id="selectAreaid" style="width: 200px"></select>
+					<button id="sec_earth_para_button">参数修正</button>
+					<button id="sec_earth_map_button">图形修正</button>
+					<!--<button id="sec_earth_clear_button">清除</button>-->
+				</div>
+
+			</div>
+			<!-----------------------评估分析：评估报告---------------------------------->
+			<div id="asseReport" style="display: none;" ng-controller="asseRepoCtrls" ng-init="asseRepoModuleInit()">
+				<div id="asse_r_content">
+					<span>报告名称：</span><input id="asse_r_name" type="text"  /><br />
+					<span>创建时间：</span><input id="asse_r_time" type="text" /><br />
+					<span>修改时间：</span><input id="asse_r_update" type="text" /><br />
+					<span>创&nbsp;&nbsp;建&nbsp;人：</span><input id="asse_r_user" type="text" />
+					<button id="export_report_button">导出</button>
+					<button id="print_report_button" >打印</button>
+				</div>
+			</div>
+			<!----------------------- 辅助决策：灾情分布 ------------------------>
+			<div id="disasterDistribute" style="display: none;" ng-controller="disDistriCtrls" ng-init="disDistriModuleInit()" class="easyui-accordion">
+				<!--<div class="dd_itemDiv dd_itemN" ng-repeat="dd_item in dd_item_data" id="dd_{{dd_item.code}}" ng-click="ddChangeDivStatus(dd_item.code)">
+					{{dd_item.name}}
+				</div>-->
+			</div>
+			<!----------------------- 辅助决策：紧急处置 ------------------------>
+			<div id="emergencyDisposal" style="display: none;" ng-controller="emergDispCtrls" ng-init="emergDispModuleInit()"></div>
+			<!----------------------- 辅助决策：受灾群众安置 --------------------->
+			<div id="peoplePlace" style="display: none;" ng-controller="peoPlaceCtrls" ng-init="peoPlaceModuleInit()">
+				<div id="pp_total_div">共&nbsp;<span id="pp_total_info"></span>&nbsp;个</div>
+				<div id="pp_result_div"></div>
+			</div>
+			<!----------------------- 辅助决策：救援队伍定位--------------------->
+			<div id="rescueTeamLocation" style="display: none;" ng-controller="resTeamLocCtrls" ng-init="resTeamLocModuleInit()"></div>
+			<!------------------------辅助决策：物资运输  ------------------------>
+			<div id="transportGoods" style="display: none;" ng-controller="transGoodsCtrls" ng-init="transGoodsModuleInit()"></div>
+			<!----------------------- 辅助决策：应急预案  ------------------------->
+			<div id="contingencyPlan" style="display: none;" ng-controller="contPlanCtrls" ng-init="contPlanModuleInit()">
+				<div id="cp_searchDiv">
+					<input type="text" />
+					<img id="cp_search_button" src="jfinal-easyui/../static/images/search.png" ng-click="cpSearchButtClick()" />
+					<img id="cp_return_button" src="jfinal-easyui/../static/images/return.png" ng-click="cpReturnButtClick()" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--中间区域布局-->
+	<div id="center" data-options="region:'center'" title="" style="overflow: hidden;">
+		<!-- 页面搜索窗口 -->
+		<div id="searchDiv">
+			<input type="text" />
+			<img src="jfinal-easyui/../static/images/search.png" />
+		</div>
+		<!--中间区域运维布局-->
+		<div id="index_tabs" style="overflow: hidden;display: none;">
+			<div title="首页" data-options="border:false" style="overflow: hidden;">
+				<iframe src="${CONTEXT_PATH}/rh?to=content" frameborder="0" style="border: 0; width: 100%; height: 100%;"></iframe>
+			</div>
+		</div>
+		<!--中间区域地图容器布局-->
+		<div id="mapContainerDiv" ng-controller="MapCtrls" style="border:1px solid #c8c6c6;overflow: hidden;" ng-init="mapControl()">
+			<div style="height: 30px; width: 100%;"></div>
+			<!--在辅助决策子系统的紧急事件模块中缓冲区分析功能的展示面板-->
+			<div id="bufferAnalysis">
+				<img id="ba_close" src="jfinal-easyui/../static/images/close.png" />
+				<div id="ba_promptMess">请输入缓冲距离：</div>
+				<div id="ba_inputInfo" >
+					<input id="ba_input" type="text"/>&nbsp;千米
+				</div>
+				<button id="ba_sureButton">确定</button>
+			</div>
+			<!--图例，样式实在index.css中进行设置的-->
+			<div id="legend">
+				<label>图例</label>
+				<!--图例名称-->
+				<div id="legendTitle"></div>
+				<!--图例内容-->
+				<div class="legendContent">
+				</div>
+			</div>
+			<!--地震宏观异常速报列表展示-->
+			<div id="pre_list">
+				<!--<div><a href="javascript:void(0);" id="pre_delete" >删除</a><a>下载</a></div>-->
+				<div id="pre_ope_button">
+					<button id="pre_delete">删除</button>
+					<button id="pre_save">导出</button>
+				</div>
+				<!--<div>-->
+				<form id="preAllForm" method="post">
+
+					<table id="pre_All" style="height: 175px;"></table>
+				</form>
+				<!--</div>-->
+			</div>
+			<!--放置统计分析中柱状图和折线图的区域-->
+			<div id="chart">
+				<div id="lineChart" style="width: 250px; float: left;display: block;">
+				</div>
+				<div id="columnChart" style="width: 250px; float: left; display: block;">
+				</div>
+			</div>
+			<!--辅助决策子系统中资源分布、评估结果、路径分析按钮的位置-->
+			<div id="assistDecDiv">
+				<!--放置按钮的位置-->
+				<div id="ad_button">
+					<button class="ad_button_class" id="ad_b_sour">资源分布</button>
+					<button class="ad_button_class" id="ad_b_anaRes" name="off" ng-controller="PEVAResultCtrls">评估结果</button>
+					<button class="ad_button_class" id="ad_b_rout" name="off" ng-click="adcRouteAna()">路径分析</button>
+				</div>
+				<!--点击按钮时需要显示的内容-->
+				<div id="ad_content"></div>
+			</div>
+			<!--辅助决策子系统中受灾群众安置模块安置点分析功能的布局位置-->
+			<div id="people_place_analy">
+				<div id="ppa_title">安置点分析</div>
+				<div id="ppa_tips">请在左侧面板选择要分析的数据：</div>
+				<div id="ppa_analy_obj">
+					<input type="radio" id="ppa_a_statur" name="ppa_ana_radio"/>安置点饱和度分析<br />
+					<input type="radio" id="ppa_a_people" name="ppa_ana_radio"/>安置点群众受伤比例
+				</div>
+			</div>
+			<!--辅助决策子系统中查看摄像头实时视频的窗口-->
+			<div id="look_at_camera">
+				<img id="lac_close" src="jfinal-easyui/../static/images/close.png" />
+				<div id="videoRegion"></div>
+				<div id="controlButton">
+					<button id="oneRegionButton" onclick="regionControl(1)">一分屏</button>
+					<button id="fourRegionButton" onclick="regionControl(4)">四分屏</button>
+					<button id="nineRegionButton" onclick="regionControl(9)">九分屏</button>
+				</div>
+			</div>
+			<video id="alertWarning1" src="${CONTEXT_PATH}/static/file/ding1.wav" style="display: none;"></video>
+			<video id="alertWarning2" src="${CONTEXT_PATH}/static/file/ding2.wav" style="display: none;"></video>
+		</div>
+		<!--<div id="cartoContainer">-->
+			<!--<textarea id="cartocssStr" style="height: 270px;width: 230px">-->
+			<!--</textarea>-->
+		<!--</div>-->
+		<!--放置表格的容器-->
+		<div id="otherContainerDiv" style="position: relative;height:100%;width:100%;border:1px solid #3473b7;display: none;">
+
+		</div>
+		<!--放置office控件的容器-->
+		<div id="webOffice" style="position: relative;height:100%;width:100%;border:1px solid #3473b7;display: none;">
+			<div id="webOffice_buttonDiv">
+				<button class="webOffice_button" id="webOffice_saveAs">另存为</button>
+				<button class="webOffice_button" id="webOffice_fullScreen">全屏</button>
+				<button class="webOffice_button" id="webOffice_close">关闭</button>
+			</div>
+			<script src="${CONTEXT_PATH}/static/app/tools/webofficeT/LoadWebOffice.js"></script>
+		</div>
+		<!--图片播放控件的布局-->
+		<div id="pictureBroses">
+			<!--窗口关闭按钮-->
+			<img id="myFocusClose" src="jfinal-easyui/../static/images/close.png" />
+			<!-- 焦点图盒子 -->
+		</div>
+		<!--视频、音频播放控件的布局-->
+		<div id="videoControl">
+			<img id="myvideosClose" src="jfinal-easyui/../static/images/close2.gif" />
+			<video id="myvideos" controls preload="auto" width="500px" height="300px">
+			</video>
+			<audio id="myaudios" controls preload="auto" width="500px" height="300px"></audio>
+		</div>
+
+	</div>
+	<!--右侧布局-->
+	<!--<div data-options="region:'east'" title="日历" style="width: 230px; overflow: hidden; display: none;">
+		<div ng-include="'${CONTEXT_PATH}/layout/rh?to=east'"></div>
+	</div>-->
+	<!--底部布局-->
+	<!--<div style="height: 60px; overflow: hidden; display: none;" data-options="region:'south',href:'${CONTEXT_PATH}/layout/rh?to=south',border:false" title=" "></div>-->
+	<div  ng-init="load()" id="index_tabsMenu" style="width: 120px; display: none;">
+		<div title="refresh" data-options="iconCls:'transmit'">刷新</div>
+		<div class="menu-sep"></div>
+		<div title="close" data-options="iconCls:'delete'">关闭</div>
+		<div title="closeOther" data-options="iconCls:'delete'">关闭其他</div>
+		<div title="closeAll" data-options="iconCls:'delete'">关闭所有</div>
+	</div>
+</div>
+@}; var js={
+<script type="text/javascript" src="${CONTEXT_PATH}/static/js/music.js"></script>
+<script src="${CONTEXT_PATH}/static/js/jquery.weather/js/jquery.weather.js"></script>
+<script src="${CONTEXT_PATH}/static/app/ctrls/index-ctrls.js" type="text/javascript"></script>
+<script type="text/javascript" src="${CONTEXT_PATH}/static/app/supermap/libs/SuperMap.Include.js"></script>
+<script type="text/javascript" src="${CONTEXT_PATH}/static/app/supermap/js/MapToImg.js"></script>
+<script type="text/javascript" src="${CONTEXT_PATH}/static/app/supermap/libs/Lang/zh-CN.js"></script>
+
+<script type="text/javascript" language="javascript" for="VissCtrlImpl101" event="OnClick()">
+	objorder=1;
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl101" event="OnDbClick()">
+	VissCtrlImpl101.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl401" event="OnClick()">
+	objorder=1;
+	//        alert(objorder);
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl401" event="OnDbClick()">
+	VissCtrlImpl401.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl402" event="OnClick()">
+	objorder=2;
+	//        alert(objorder);
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl402" event="OnDbClick()">
+	VissCtrlImpl402.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl403" event="OnClick()">
+	objorder=3;
+	//        alert(objorder);
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl403" event="OnDbClick()">
+	VissCtrlImpl403.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl404" event="OnClick()">
+	objorder=4;
+	//        alert(objorder);
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl404" event="OnDbClick()">
+	VissCtrlImpl404.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl901" event="OnClick()">
+	objorder=1;
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl901" event="OnDbClick()">
+	VissCtrlImpl901.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl902" event="OnClick()">
+	objorder=2;
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl902" event="OnDbClick()">
+	VissCtrlImpl902.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl903" event="OnClick()">
+	objorder=3;
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl903" event="OnDbClick()">
+	VissCtrlImpl903.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl904" event="OnClick()">
+	objorder=4;
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl904" event="OnDbClick()">
+	VissCtrlImpl904.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl905" event="OnClick()">
+	objorder=5;
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl905" event="OnDbClick()">
+	VissCtrlImpl905.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl906" event="OnClick()">
+	objorder=6;
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl906" event="OnDbClick()">
+	VissCtrlImpl906.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl907" event="OnClick()">
+	objorder=7;
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl907" event="OnDbClick()">
+	VissCtrlImpl907.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl908" event="OnClick()">
+	objorder=8;
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl908" event="OnDbClick()">
+	VissCtrlImpl908.SetFullScreen();
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl909" event="OnClick()">
+	objorder=9;
+</script>
+<script type="text/javascript" language="javascript" for="VissCtrlImpl909" event="OnDbClick()">
+	VissCtrlImpl909.SetFullScreen();
+</script>
+
+<script type="text/javascript">
+	var objorder;//区块标记
+	var regionmode;//分频模式
+	var oldmode;//分屏模式记忆
+	var playnum;//播放次数
+	objorder=0;
+	regionmode=0;
+	playnum=0;
+	oldmode=1;
+	var hashrc={};
+
+	//初始化视频窗口
+	function initVideoTool(){
+		addOneRegion();//添加1分屏窗口，该方法在在videotool.js文件中进行了实现
+		addFourRegion();//添加四分屏窗口，该方法在在videotool.js文件中进行了实现
+		addNineRegion();//添加9分屏窗口，该方法在在videotool.js文件中进行了实现
+		initElementLiVideo();//初始化ocx控件，该方法在在videotool.js文件中进行了实现
+
+		try{document.getElementById("one").style.display="";}catch (err) {}
+		try{document.getElementById("four").style.display="none";}catch (err) {}
+		try{document.getElementById("nine").style.display="none";}catch (err) {}
+	}
+
+	/*隐藏1、4、9分屏*/
+	//  function hidenVideoRegion(){
+	//      try{document.getElementById("one").style.display="none";}catch (err) {}
+	//      try{document.getElementById("four").style.display="none";}catch (err) {}
+	//      try{document.getElementById("nine").style.display="none";}catch (err) {}
+	//  }
+
+	//播放视屏的方法，只需要传入一个参数：中兴id
+	function playControl(cameraID){
+		/* 		alert(cameraID); */
+		var regionY=0;
+		playnum+=1;
+		if(objorder!==0&&objorder<=regionmode){
+			regionY=objorder;
+			playnum=objorder;
+			objorder=0;
+		}else{
+			if(playnum>regionmode&&regionmode>1){
+				playnum%=regionmode;
+			}
+			regionY=playnum;
+		}
+		if(regionmode==1){
+			stopVideoEvery (1,1);
+			startVideo(cameraID,1,1);
+			hashrc[1]=cameraID;
+			/*             alert("A:"+cameraID); */
+		}else if(regionmode==10){
+			AddTvResource(cameraID);
+			playnum--;
+//            alert(playnum);
+		}else{
+			/*         	alert("playnum:"+playnum);
+			 alert("regionmode:"+regionmode);
+			 alert("objorder:"+objorder);
+			 alert("regionY:"+regionY); */
+			stopVideoEvery (regionmode,regionY);
+			startVideo(cameraID,regionY,regionmode);
+			hashrc[regionY]=cameraID;
+		}
+	}
+
+	//分屏控制
+	function regionControl(mode){
+		if(mode==0){
+			regionmode=0;
+			videoModeExchange(0,0);
+		}else if(mode==1){
+			regionmode=1;
+			videoModeExchange(0,1);
+		}else if(mode==4){
+			regionmode=4;
+			videoModeExchange(0,4);
+		}else if(mode==9){
+			regionmode=9;
+			videoModeExchange(0,9);
+		}
+		/* alert(mode); */
+	}
+
+	//全屏控制
+	function fullControl(){
+//      alert(regionmode);
+		if(regionmode==1){fullOneRegion();}
+		else if(regionmode==4){fullFourRegion();}
+		else if(regionmode==9){fullNineRegion();}
+	}
+
+	//退出全屏控制
+	function exitFullControl(){
+		if(regionmode==1){exitFullOneRegion();}
+		else if(regionmode==4){exitFullFourRegion();}
+		else if(regionmode==9){exitFullNineRegion();}
+	}
+	initVideoTool();
+</script>
+<!--<script type="text/javascript" src="${CONTEXT_PATH}/static/app/initModuleFun.js"></script>-->
+@}; include("../layout/_layout.html",{head:head,body:body,js:js}) {}
+

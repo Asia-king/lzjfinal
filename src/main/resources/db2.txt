@@ -1,0 +1,10 @@
+jdbcUrlNoSpace = jdbc:mysql://192.168.1.34:3306/earthquake?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull
+jdbcUrlSpace = jdbc:mysql://192.168.1.34:3306/earthquakesp?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull
+jdbcUrlorigin = jdbc:mysql://192.168.1.34:3306/information_schema?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull
+user = root
+password = 123456
+dbType = mysql
+devMode = true
+decrypt = true
+
+ 

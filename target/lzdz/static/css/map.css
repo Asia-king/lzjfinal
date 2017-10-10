@@ -1,0 +1,87 @@
+#center{
+	border: none;
+}
+
+/*鍦板浘宸ュ叿*/
+#tools{
+	width: 155px;
+	height: 25px;
+	z-index: 1250;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	border: 0.5px solid #AAAAAA;
+	border-right: none;
+	box-shadow: 2px 2px 2px #ABABAB;
+	background-color: #FFFFFF;
+	text-align: center;
+	/*background-color: #00EE00;*/
+	/*background: url(../img/maptool_bg.png) 100% 100%;*/
+}
+.tool{
+	width: 30px;
+	height: 100%;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+	border-right: 0.5px solid #AAAAAA;
+	/*border: 0.5px solid #00008B;*/
+}
+.tool:hover{
+	/*z-index: 1251;*/
+	background-color: #E6EEF8;
+	/*border: 0.5px solid #00008B;*/
+}
+.tool span{
+	display: none;
+	margin-top: 6px;
+	font-size: 14px;
+}
+.tool:hover span{
+	font-size: 10px;
+	color: #666666;
+	display: block;
+}
+/*.tool img{
+    margin-top: 5px;
+}
+#distance img{
+    margin-top: 7px;
+}*/
+/*鍦板浘鎼滅储绐楀彛鐨勫竷灞�*/
+#mt_search_win{
+	display: none;
+}
+#mt_search_info{
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	border: 1px solid #E1E1E8;
+	box-shadow: 2px 2px 2px #ABABAB;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	color: #BFBFBF;
+	font-size: 12px;
+	height: 21px;
+}
+
+#mt_search_win img{
+	position: relative;
+	left: 35px;
+	top: 2px;
+	cursor: pointer;
+}
+
+#cartoContainer{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+#cartoContainer.hide{
+	display: none;
+}
+#cartocssStr{
+	height: 450px;
+	width: 350px;
+	display: block;
+}

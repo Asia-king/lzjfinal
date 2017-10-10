@@ -1,0 +1,44 @@
+/*预评估模块的样式布局*/
+#asseReport{
+	width: 100%;
+	height: 98%;
+	margin: auto;
+	display: none;
+}
+	#asse_r_content{
+		width: 100%;
+	}
+	#asse_r_name,#asse_r_time,#asse_r_update,#asse_r_user{
+		border: none;
+		width: 170px;
+		margin-bottom: 5px;
+		box-shadow: none;
+	}
+#print_report_button{
+	margin-left: 80px;
+	font-size: 12px;
+	width: 60px;
+	cursor: pointer;
+	color:#FFFFFF;
+	background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+	border: none;
+}
+#export_report_button{
+	margin-left: 80px;
+	font-size: 12px;
+	width: 60px;
+	cursor: pointer;
+	color:#FFFFFF;
+	background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+	box-shadow: 2px 2px 1px 1px rgb(217, 217, 218);
+	border: none;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="${CONTEXT_PATH}/static/js/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
+<title>fileUpload</title>
+</head>
+<body>
+<input id="doanloadid" type="button" value="下载">
+<div class="row cl">
+	<label class="form-label col-2">文件上传：</label>
+	<div class="formControls col-10">
+		<div class="uploader-list-container">
+		
+			<div class="queueList">
+				<div id="dndArea" class="placeholder">
+					<div id="filePicker-2"></div>
+					<p>若为图片可拖到这里，单次最多可选300张</p>
+				</div>
+			</div>
+			
+			<div class="statusBar" style="display:none;">
+				<div class="progress"> <span class="text">0%</span> <span class="percentage"></span> </div>
+				<div class="info"></div>
+				<div class="btns">
+					<div id="filePicker2"></div>
+ 					<div class="uploadBtn">开始上传</div> 
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div id="aaa">
+
+</div>
+<script type="text/javascript" src="${CONTEXT_PATH}/static/js/jsontool/json2.js"></script>
+<script type="text/javascript" src="${CONTEXT_PATH}/static/js/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="${CONTEXT_PATH}/static/js/webuploader/0.1.5/webuploader.min.js"></script>
+<script type="text/javascript" src="${CONTEXT_PATH}/static/app/fileUpload.js"></script>
+
+<script type="text/javascript">
+(function( $ ){
+    // 当domReady的时候开始初始化
+    $(function() {
+    	uploadReady('${CONTEXT_PATH}/page/index/uploads');
+    });
+    
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+/*     alert('是否是Android：'+isAndroid);
+    alert('是否是iOS：'+isiOS); */
+
+})( jQuery );
+</script>
+</body>
+</html>

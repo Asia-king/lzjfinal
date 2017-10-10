@@ -1,0 +1,94 @@
+/*左侧最外层div的样式，即装载accordion控件的div*/
+#dataWareHouse{
+	width: 89%;
+	height: 98%;
+	margin: auto;
+	padding-top: 3%;
+	display: block;
+}
+
+/*修改accordion控件自身的样式*/
+.accordion{
+	border: none;
+}
+	.accordion .panel-header, .panel-body{
+		border: none;
+	}
+	/*未被选中的面板的样式*/
+	.accordion .accordion-header{
+		/*background: url(../img/panel-header.png);
+		background-size: 100% 100%;*/
+		/*background-color: rgb(229,243,255);*/
+		/*border: 0.5px solid rgb(157,195,230);*/
+		/*box-shadow: 2px ;*/
+		
+		/*background-color: rgb(0,157,79);
+		border: 2px solid rgb(162,227,187);*/
+		
+		background-image: -ms-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -webkit-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -moz-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: -o-linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		background-image: linear-gradient(top, rgb(122,223,169),rgb(0,157,79));
+		
+		border-radius: 10px;
+		height: 13px;
+	}
+	
+	/*.accordion .accordion-header:hover{
+		background-color: rgb(8,86,186);
+	}*/
+	
+	.accordion .accordion-body{
+		padding-top: 5%;
+	}
+.accordion .panel{
+	width: 70%;
+	margin: 0 0 2% 0;
+}
+	/*panel面板title样式*/
+	.accordion .accordion-header .panel-title{
+		font-size: 14px;
+		font-weight: normal;
+		color: #FFFFFF;
+		line-height: 13px;
+	}
+	
+	/*面板中嵌套的tree的样式*/
+	.tree-title{
+		color: #6A6A6A;
+	}
+	.tree-node{
+		height: 20px;
+	}
+
+/*表格样式设置*/	
+.datagrid{
+	position: absolute;
+	top:50px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	overflow: auto;
+	border: 1px solid #DADADA;
+	box-shadow: 2px 2px 2px #DADADA;
+	background-color: #FFFFFF;
+}
+	/*表格头部的样式*/
+	.datagrid-header{
+		text-align: center;
+		font-size: 14px;
+		font-weight: bold;
+		background-color: #F4F4F4;
+	}
+	
+/*房屋统计，单选按钮的样式*/
+#radiosDiv{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+	#radiosDiv input{
+		/*margin-left: 10px;*/
+		margin: 0 0 0 10px;
+	}

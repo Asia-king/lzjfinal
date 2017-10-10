@@ -1,0 +1,52 @@
+<link href="${CONTEXT_PATH}/static/js/jquery.weather/images/default/julying-weather.css" rel="stylesheet" type="text/css">
+<link href="${CONTEXT_PATH}/static/js/jquery.weather/css/main.css" rel="stylesheet" type="text/css">
+<!--头部系统图标\名称-->
+<div id="sys_name_icon_id">
+	
+</div>
+<!--头部系统模块-->
+<div id="sys_modules_id">
+</div>
+
+<!--返回首页以及退出系统按钮-->
+<div id="home_and_logOut">
+	<!--用户名称以及当前日期-->
+	<div id="user_and_currTime">
+		欢迎{{sys_username}},今天是{{currentDate}} &nbsp;&nbsp;&nbsp;
+	</div>
+	<div id="index_home" ng-click="toppage()">
+		<img src="jfinal-easyui/../static/images/index_home.png" />
+		返回首页
+	</div>
+	<div id="h_l_split">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+	<div id="index_log_out" ng-click="logout()">
+		<img src="jfinal-easyui/../static/images/index_log_out.png" />
+		退出系统
+	</div>
+</div>
+
+<!--头部系统模块功能-->
+<!--<div id="sys_modules_do_id">
+</div>
+<div id="operationBtn">
+	<a href="javascript:void(0);"  id="btn_skin" style="width: 50px;"><label style="width: 50px">换肤</label></a>
+	<a href="javascript:void(0);" id="btn_logout" style="width: 50px;"><label style="width: 50px">系统</label></a>
+</div>-->
+
+<!--<div id="layout_north_pfMenu" style="width: 100px; display: none;">
+	<div ng-click="changeThemeFun('default');" title="default">default</div>
+	<div ng-click="changeThemeFun('gray');" title="gray">gray</div>
+	<div ng-click="changeThemeFun('metro');" title="metro">metro</div>
+	<div ng-click="changeThemeFun('bootstrap');" title="bootstrap">bootstrap</div>
+	<div ng-click="changeThemeFun('black');" title="black">black</div>
+</div>
+<div id="layout_north_zxMenu" style="width: 100px; display: none;">
+	<div ng-click="toppage();">首页</div>
+	<div ng-click="logout();">注销</div>
+	<div ng-click="logout();">退出</div>
+</div>-->
+<!--操作方法注册-->
+<div ng-init="init_north()"></div>
+<div ng-init="sysNameIcon()"></div>
+<div ng-init="sysMobuleInit()"></div>
+<div ng-init="sysMobuleLoad()"></div>
